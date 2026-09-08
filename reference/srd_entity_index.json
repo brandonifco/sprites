@@ -1,0 +1,4938 @@
+{
+  "schema_version": 1,
+  "srd_version": "5.2.1",
+  "creature_size_mapping": {
+    "Tiny": "64x64",
+    "Small": "64x64",
+    "Medium": "64x64",
+    "Large": "128x128",
+    "Huge": "192x192",
+    "Gargantuan": "192x192"
+  },
+  "entities": [
+    {
+      "name": "Barbarian",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Bard",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Cleric",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Druid",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Fighter",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Monk",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Paladin",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Ranger",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Rogue",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Sorcerer",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Warlock",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Wizard",
+      "type": "player",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Any",
+      "cr": null,
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid"
+      ],
+      "typical_equipment": null,
+      "available_species": [
+        "Human",
+        "Elf",
+        "Dwarf",
+        "Halfling",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling",
+        "Dragonborn",
+        "Orc",
+        "Aasimar",
+        "Goliath"
+      ]
+    },
+    {
+      "name": "Aboleth",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Aberration",
+      "alignment": "Lawful Evil",
+      "cr": "10",
+      "xp": 5900,
+      "visual_descriptors": [
+        "large aberration"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Air Elemental",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Elemental",
+      "alignment": "Neutral",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "large elemental",
+        "elemental form"
+      ],
+      "typical_equipment": [
+        "longsword"
+      ]
+    },
+    {
+      "name": "Animated Flying Sword",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "small construct",
+        "constructed body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Animated Rug of Smothering",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large construct",
+        "constructed body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ankheg",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large monstrosity",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Assassin",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "crossbow",
+        "hide armor",
+        "leather armor",
+        "longsword"
+      ]
+    },
+    {
+      "name": "Awakened Shrub",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Plant",
+      "alignment": "Neutral",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "small plant",
+        "plant body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Awakened Tree",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Plant",
+      "alignment": "Neutral",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "huge plant",
+        "plant body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Axe Beak",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "large monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Azer Sentinel",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Elemental",
+      "alignment": "Lawful Neutral",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium elemental",
+        "elemental form"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Bandit",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "1/8",
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Balor",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Fiend (Demon)",
+      "alignment": "Chaotic Evil",
+      "cr": "19",
+      "xp": 22000,
+      "visual_descriptors": [
+        "huge fiend (demon)",
+        "fiendish"
+      ],
+      "typical_equipment": [
+        "crossbow",
+        "leather armor",
+        "scimitar"
+      ]
+    },
+    {
+      "name": "Bandit Captain",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid",
+        "tail"
+      ],
+      "typical_equipment": [
+        "leather armor",
+        "scimitar"
+      ]
+    },
+    {
+      "name": "Basilisk",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Bearded Devil",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend (Devil)",
+      "alignment": "Lawful Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium fiend (devil)",
+        "fiendish",
+        "quadruped",
+        "fur"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Behir",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Monstrosity",
+      "alignment": "Neutral Evil",
+      "cr": "11",
+      "xp": 7200,
+      "visual_descriptors": [
+        "huge monstrosity",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Berserker",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "greataxe",
+        "hide armor"
+      ]
+    },
+    {
+      "name": "Black Dragon Wyrmling",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium dragon (chromatic)",
+        "black scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Adult Black Dragon",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "14",
+      "xp": 11500,
+      "visual_descriptors": [
+        "huge dragon (chromatic)",
+        "black scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Young Black Dragon",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "7",
+      "xp": 2900,
+      "visual_descriptors": [
+        "large dragon (chromatic)",
+        "black scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ancient Black Dragon",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "21",
+      "xp": 33000,
+      "visual_descriptors": [
+        "gargantuan dragon (chromatic)",
+        "black scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Blink Dog",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey",
+      "alignment": "Lawful Good",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "medium fey",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Adult Blue Dragon",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Lawful Evil",
+      "cr": "16",
+      "xp": null,
+      "visual_descriptors": [
+        "huge dragon (chromatic)",
+        "blue scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Blue Dragon Wyrmling",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Lawful Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium dragon (chromatic)",
+        "blue scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Bone Devil",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Lawful Evil",
+      "cr": "9",
+      "xp": 5000,
+      "visual_descriptors": [
+        "gargantuan dragon (chromatic)",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Brass Dragon Wyrmling",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Chaotic Good",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "medium dragon (metallic)",
+        "brass scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Adult Brass Dragon",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Chaotic Good",
+      "cr": "13",
+      "xp": 10000,
+      "visual_descriptors": [
+        "huge dragon (metallic)",
+        "brass scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Young Brass Dragon",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Chaotic Good",
+      "cr": "6",
+      "xp": 2300,
+      "visual_descriptors": [
+        "large dragon (metallic)",
+        "brass scales",
+        "wings",
+        "claws",
+        "tail",
+        "fangs/bite"
+      ],
+      "typical_equipment": [
+        "chain mail",
+        "crossbow",
+        "dagger",
+        "greatsword",
+        "hide armor",
+        "javelin",
+        "leather armor",
+        "longbow",
+        "longsword",
+        "mace",
+        "plate armor",
+        "scimitar",
+        "shield",
+        "shortbow",
+        "spear",
+        "staff",
+        "wand"
+      ]
+    },
+    {
+      "name": "Bronze Dragon Wyrmling",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Lawful Good",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium dragon (metallic)",
+        "bronze scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Young Bronze Dragon",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Lawful Good",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "large dragon (metallic)",
+        "bronze scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ancient Bronze Dragon",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Lawful Good",
+      "cr": "22",
+      "xp": 41000,
+      "visual_descriptors": [
+        "gargantuan dragon (metallic)",
+        "bronze scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Bugbear Stalker",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey (Goblinoid)",
+      "alignment": "Chaotic Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium fey (goblinoid)",
+        "goblinoid",
+        "quadruped",
+        "fur"
+      ],
+      "typical_equipment": [
+        "chain mail",
+        "javelin"
+      ]
+    },
+    {
+      "name": "Bugbear Warrior",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey (Goblinoid)",
+      "alignment": "Chaotic Evil",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "medium fey (goblinoid)",
+        "goblinoid",
+        "quadruped",
+        "fur"
+      ],
+      "typical_equipment": [
+        "hide armor"
+      ]
+    },
+    {
+      "name": "Centaur Trooper",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fey",
+      "alignment": "Neutral Good",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large fey"
+      ],
+      "typical_equipment": [
+        "longbow",
+        "plate armor"
+      ]
+    },
+    {
+      "name": "Bulette",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "large monstrosity",
+        "fangs/bite"
+      ],
+      "typical_equipment": [
+        "chain mail"
+      ]
+    },
+    {
+      "name": "Chain Devil",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend (Devil)",
+      "alignment": "Lawful Evil",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "medium fiend (devil)",
+        "fiendish",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": [
+        "chain mail"
+      ]
+    },
+    {
+      "name": "Chimera",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Chaotic Evil",
+      "cr": "6",
+      "xp": null,
+      "visual_descriptors": [
+        "large monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Clay Golem",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "9",
+      "xp": 5000,
+      "visual_descriptors": [
+        "large construct",
+        "constructed body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Cloaker",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Aberration",
+      "alignment": "Chaotic Neutral",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "large aberration",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Cloud Giant",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Giant",
+      "alignment": "Neutral",
+      "cr": "9",
+      "xp": 5000,
+      "visual_descriptors": [
+        "huge giant",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Commoner",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "mace"
+      ]
+    },
+    {
+      "name": "Cockatrice",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": null,
+      "visual_descriptors": [
+        "small monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Immunities Acid",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Chaotic Good",
+      "cr": "7",
+      "xp": 2900,
+      "visual_descriptors": [
+        "large dragon (metallic)"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Adult Copper Dragon",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Chaotic Good",
+      "cr": "14",
+      "xp": null,
+      "visual_descriptors": [
+        "huge dragon (metallic)",
+        "copper scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ancient Copper Dragon",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Chaotic Good",
+      "cr": "21",
+      "xp": 33000,
+      "visual_descriptors": [
+        "gargantuan dragon (metallic)",
+        "copper scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Couatl",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Celestial",
+      "alignment": "Lawful Good",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "medium celestial",
+        "radiant",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": [
+        "leather armor",
+        "shield"
+      ]
+    },
+    {
+      "name": "Crawling Claw",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Swarm of Tiny Undead",
+      "alignment": "Neutral Evil",
+      "cr": "0",
+      "xp": null,
+      "visual_descriptors": [
+        "medium swarm of tiny undead",
+        "undead"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Cultist Fanatic",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "leather armor"
+      ]
+    },
+    {
+      "name": "Cultist",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "1/8",
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Darkmantle",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Aberration",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "small aberration"
+      ],
+      "typical_equipment": [
+        "mace"
+      ]
+    },
+    {
+      "name": "Resistances Radiant",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Neutral Evil",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "medium monstrosity",
+        "fangs/bite"
+      ],
+      "typical_equipment": [
+        "mace"
+      ]
+    },
+    {
+      "name": "Djinni",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Elemental (Genie)",
+      "alignment": "Neutral",
+      "cr": "11",
+      "xp": 7200,
+      "visual_descriptors": [
+        "large elemental (genie)",
+        "elemental form"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Doppelganger",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Neutral",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Dragon Turtle",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon",
+      "alignment": "Neutral",
+      "cr": "17",
+      "xp": 18000,
+      "visual_descriptors": [
+        "gargantuan dragon",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Drider",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Chaotic Evil",
+      "cr": "6",
+      "xp": 2300,
+      "visual_descriptors": [
+        "large monstrosity",
+        "fangs/bite",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Dretch",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend (Demon)",
+      "alignment": "Chaotic Evil",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "small fiend (demon)",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Druid",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid (Druid)",
+      "alignment": "Neutral",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium humanoid (druid)",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "leather armor",
+        "staff"
+      ]
+    },
+    {
+      "name": "Earth Elemental",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Elemental",
+      "alignment": "Neutral",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "large elemental",
+        "elemental form"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Dryad",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey",
+      "alignment": "Neutral",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "medium fey"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Efreeti",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend (Devil)",
+      "alignment": "Lawful Evil",
+      "cr": "11",
+      "xp": null,
+      "visual_descriptors": [
+        "medium fiend (devil)",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ettercap",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Neutral Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium monstrosity",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ettin",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Giant",
+      "alignment": "Chaotic Evil",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "large giant"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Fire Elemental",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Elemental",
+      "alignment": "Neutral",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "large elemental",
+        "elemental form"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Fire Giant",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Giant",
+      "alignment": "Lawful Evil",
+      "cr": "9",
+      "xp": 5000,
+      "visual_descriptors": [
+        "huge giant",
+        "massive frame"
+      ],
+      "typical_equipment": [
+        "longsword"
+      ]
+    },
+    {
+      "name": "Flesh Golem",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Construct",
+      "alignment": "Neutral",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "medium construct",
+        "constructed body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Frost Giant",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Giant",
+      "alignment": "Neutral Evil",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "huge giant",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Fungi",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Plant",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 0,
+      "visual_descriptors": [
+        "medium plant",
+        "plant body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Violet Fungus",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Plant",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": null,
+      "visual_descriptors": [
+        "medium plant",
+        "plant body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Gargoyle",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Elemental",
+      "alignment": "Chaotic Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium elemental",
+        "elemental form",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Gelatinous Cube",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Ooze",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large ooze",
+        "amorphous"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ghast",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Chaotic Evil",
+      "cr": "2",
+      "xp": null,
+      "visual_descriptors": [
+        "medium undead",
+        "undead",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ghost",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Neutral",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "medium undead",
+        "undead",
+        "translucent",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ghoul",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Chaotic Evil",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "medium undead",
+        "undead",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Gibbering Mouther",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Aberration",
+      "alignment": "Chaotic Neutral",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium aberration",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Glabrezu",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend (Demon)",
+      "alignment": "Chaotic Evil",
+      "cr": "9",
+      "xp": 5000,
+      "visual_descriptors": [
+        "large fiend (demon)",
+        "fiendish"
+      ],
+      "typical_equipment": [
+        "leather armor",
+        "shield",
+        "spear"
+      ]
+    },
+    {
+      "name": "Gnoll Warrior",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend",
+      "alignment": "Chaotic Evil",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "medium fiend",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Gladiator",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Goblin Boss",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey (Goblinoid)",
+      "alignment": "Chaotic Neutral",
+      "cr": "2",
+      "xp": null,
+      "visual_descriptors": [
+        "small fey (goblinoid)",
+        "goblinoid"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Goblin Minion",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey (Goblinoid)",
+      "alignment": "Chaotic Neutral",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "small fey (goblinoid)",
+        "goblinoid"
+      ],
+      "typical_equipment": [
+        "chain mail",
+        "dagger",
+        "hide armor",
+        "scimitar",
+        "shield",
+        "shortbow"
+      ]
+    },
+    {
+      "name": "Goblin Warrior",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey (Goblinoid)",
+      "alignment": "Chaotic Neutral",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "small fey (goblinoid)",
+        "goblinoid"
+      ],
+      "typical_equipment": [
+        "hide armor",
+        "leather armor",
+        "scimitar",
+        "shield",
+        "shortbow"
+      ]
+    },
+    {
+      "name": "Gold Dragon Wyrmling",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Lawful Good",
+      "cr": "3",
+      "xp": null,
+      "visual_descriptors": [
+        "medium dragon (metallic)",
+        "gold scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": [
+        "hide armor",
+        "scimitar",
+        "shortbow"
+      ]
+    },
+    {
+      "name": "Adult Gold Dragon",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Lawful Good",
+      "cr": "17",
+      "xp": 18000,
+      "visual_descriptors": [
+        "huge dragon (metallic)",
+        "gold scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Young Gold Dragon",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Lawful Good",
+      "cr": "10",
+      "xp": 5900,
+      "visual_descriptors": [
+        "large dragon (metallic)",
+        "gold scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ancient Gold Dragon",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Lawful Good",
+      "cr": "24",
+      "xp": 62000,
+      "visual_descriptors": [
+        "gargantuan dragon (metallic)",
+        "gold scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Gorgon",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "large construct",
+        "constructed body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Green Dragon Wyrmling",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Lawful Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium dragon (chromatic)",
+        "green scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Gray Ooze",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Ooze",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "medium ooze",
+        "amorphous"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Young Green Dragon",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Lawful Evil",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "large dragon (chromatic)",
+        "green scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ancient Green Dragon",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Lawful Evil",
+      "cr": "15",
+      "xp": 13000,
+      "visual_descriptors": [
+        "huge dragon (chromatic)",
+        "green scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Grick",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Aberration",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium aberration"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Green Hag",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey",
+      "alignment": "Neutral Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium fey",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Griffon",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large monstrosity",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Grimlock",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Aberration",
+      "alignment": "Neutral Evil",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "medium aberration"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Guard",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "chain mail",
+        "shield",
+        "spear"
+      ]
+    },
+    {
+      "name": "Guard Captain",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid",
+        "claws"
+      ],
+      "typical_equipment": [
+        "javelin",
+        "longsword",
+        "plate armor",
+        "shield"
+      ]
+    },
+    {
+      "name": "Half-Dragon",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon",
+      "alignment": "Neutral",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "medium dragon",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Hell Hound",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend",
+      "alignment": "Lawful Evil",
+      "cr": "3",
+      "xp": null,
+      "visual_descriptors": [
+        "medium fiend",
+        "fiendish",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Harpy",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Chaotic Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium monstrosity",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Hezrou",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend (Demon)",
+      "alignment": "Chaotic Evil",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "large fiend (demon)",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Hippogriff",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "large monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Hill Giant",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Fey (Goblinoid)",
+      "alignment": "Lawful Evil",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "medium fey (goblinoid)",
+        "goblinoid",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Horned Devil",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend (Devil)",
+      "alignment": "Lawful Evil",
+      "cr": "11",
+      "xp": 7200,
+      "visual_descriptors": [
+        "large fiend (devil)",
+        "fiendish"
+      ],
+      "typical_equipment": [
+        "greatsword",
+        "longbow",
+        "longsword"
+      ]
+    },
+    {
+      "name": "Homunculus",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Construct",
+      "alignment": "Neutral",
+      "cr": "0",
+      "xp": null,
+      "visual_descriptors": [
+        "tiny construct",
+        "constructed body",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ice Devil",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend (Devil)",
+      "alignment": "Lawful Evil",
+      "cr": "14",
+      "xp": 11500,
+      "visual_descriptors": [
+        "large fiend (devil)",
+        "fiendish",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Hydra",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "huge monstrosity",
+        "fangs/bite",
+        "tail"
+      ],
+      "typical_equipment": [
+        "spear"
+      ]
+    },
+    {
+      "name": "Imp",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend (Devil)",
+      "alignment": "Lawful Evil",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "tiny fiend (devil)",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Incubus",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend",
+      "alignment": "Neutral Evil",
+      "cr": "4",
+      "xp": null,
+      "visual_descriptors": [
+        "medium fiend",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Iron Golem",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "16",
+      "xp": 15000,
+      "visual_descriptors": [
+        "large construct",
+        "constructed body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Knight",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "crossbow",
+        "greatsword",
+        "longsword",
+        "plate armor"
+      ]
+    },
+    {
+      "name": "Kobold Warrior",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon",
+      "alignment": "Neutral",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "small dragon"
+      ],
+      "typical_equipment": [
+        "dagger"
+      ]
+    },
+    {
+      "name": "Kraken",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Monstrosity (Titan)",
+      "alignment": "Chaotic Evil",
+      "cr": "23",
+      "xp": 50000,
+      "visual_descriptors": [
+        "gargantuan monstrosity (titan)"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Lamia",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend",
+      "alignment": "Chaotic Evil",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "large fiend",
+        "fiendish",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Lemure",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend (Devil)",
+      "alignment": "Lawful Evil",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "medium fiend (devil)",
+        "fiendish"
+      ],
+      "typical_equipment": [
+        "chain mail",
+        "shield"
+      ]
+    },
+    {
+      "name": "Lich",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead (Wizard)",
+      "alignment": "Neutral Evil",
+      "cr": "21",
+      "xp": 33000,
+      "visual_descriptors": [
+        "medium undead (wizard)",
+        "undead"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Mage",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid (Wizard)",
+      "alignment": "Neutral",
+      "cr": "6",
+      "xp": 2300,
+      "visual_descriptors": [
+        "medium humanoid (wizard)",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "shield",
+        "wand"
+      ]
+    },
+    {
+      "name": "Magmin",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Elemental",
+      "alignment": "Chaotic Neutral",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "small elemental",
+        "elemental form"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Immunities Fire",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid (Wizard)",
+      "alignment": "Neutral",
+      "cr": "12",
+      "xp": 8000,
+      "visual_descriptors": [
+        "medium humanoid (wizard)",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "wand"
+      ]
+    },
+    {
+      "name": "Manticore",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Lawful Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "large monstrosity",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Marilith",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend (Demon)",
+      "alignment": "Chaotic Evil",
+      "cr": "16",
+      "xp": 15000,
+      "visual_descriptors": [
+        "large fiend (demon)",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Medusa",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Lawful Evil",
+      "cr": "6",
+      "xp": 2300,
+      "visual_descriptors": [
+        "medium monstrosity",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Dust Mephit",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Elemental",
+      "alignment": "Neutral Evil",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "small elemental",
+        "elemental form",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Magma Mephit",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Elemental",
+      "alignment": "Neutral Evil",
+      "cr": "1/2",
+      "xp": null,
+      "visual_descriptors": [
+        "small elemental",
+        "elemental form",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ice Mephit",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Elemental",
+      "alignment": "Neutral Evil",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "small elemental",
+        "elemental form",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Steam Mephit",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Elemental",
+      "alignment": "Neutral Evil",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "small elemental",
+        "elemental form"
+      ],
+      "typical_equipment": [
+        "spear"
+      ]
+    },
+    {
+      "name": "Merrow",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Chaotic Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large monstrosity",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Merfolk Skirmisher",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Elemental",
+      "alignment": "Neutral",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "medium elemental",
+        "elemental form"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Mimic",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Neutral",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium monstrosity",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Minotaur of Baphomet",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Chaotic Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "large monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Mummy",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Lawful Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium undead",
+        "undead"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Mummy Lord",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead (Cleric)",
+      "alignment": "Lawful Evil",
+      "cr": "15",
+      "xp": 13000,
+      "visual_descriptors": [
+        "medium undead (cleric)",
+        "undead"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Nalfeshnee",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend (Demon)",
+      "alignment": "Chaotic Evil",
+      "cr": "13",
+      "xp": 10000,
+      "visual_descriptors": [
+        "large fiend (demon)",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Night Hag",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend",
+      "alignment": "Neutral Evil",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "medium fiend",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Nightmare",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend",
+      "alignment": "Neutral Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "large fiend",
+        "fiendish",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Noble",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "plate armor"
+      ]
+    },
+    {
+      "name": "Ogre",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Giant",
+      "alignment": "Chaotic Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large giant"
+      ],
+      "typical_equipment": [
+        "javelin"
+      ]
+    },
+    {
+      "name": "Ochre Jelly",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Ooze",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large ooze",
+        "amorphous"
+      ],
+      "typical_equipment": [
+        "javelin"
+      ]
+    },
+    {
+      "name": "Oni",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend",
+      "alignment": "Lawful Evil",
+      "cr": "7",
+      "xp": 2900,
+      "visual_descriptors": [
+        "large fiend",
+        "fiendish",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Owlbear",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "large monstrosity",
+        "quadruped",
+        "fur"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Otyugh",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Aberration",
+      "alignment": "Neutral",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "large aberration",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Phase Spider",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "large monstrosity",
+        "eight legs"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Pirate Captain",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "6",
+      "xp": 2300,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Pirate",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "dagger",
+        "leather armor"
+      ]
+    },
+    {
+      "name": "Pit Fiend",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend (Devil)",
+      "alignment": "Lawful Evil",
+      "cr": "20",
+      "xp": 25000,
+      "visual_descriptors": [
+        "large fiend (devil)",
+        "fiendish",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": [
+        "mace"
+      ]
+    },
+    {
+      "name": "Planetar",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Celestial (Angel)",
+      "alignment": "Lawful Good",
+      "cr": "16",
+      "xp": 15000,
+      "visual_descriptors": [
+        "large celestial (angel)",
+        "radiant"
+      ],
+      "typical_equipment": [
+        "longsword"
+      ]
+    },
+    {
+      "name": "Priest Acolyte",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid (Cleric)",
+      "alignment": "Neutral",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "medium humanoid (cleric)",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "chain mail",
+        "mace"
+      ]
+    },
+    {
+      "name": "Pseudodragon",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon",
+      "alignment": "Neutral Good",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "tiny dragon",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": [
+        "mace"
+      ]
+    },
+    {
+      "name": "Purple Worm",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "15",
+      "xp": 13000,
+      "visual_descriptors": [
+        "gargantuan monstrosity",
+        "fangs/bite",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Quasit",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend (Demon)",
+      "alignment": "Chaotic Evil",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "tiny fiend (demon)",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Rakshasa",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend",
+      "alignment": "Lawful Evil",
+      "cr": "13",
+      "xp": 10000,
+      "visual_descriptors": [
+        "medium fiend",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Red Dragon Wyrmling",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "medium dragon (chromatic)",
+        "red scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Young Red Dragon",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "10",
+      "xp": 5900,
+      "visual_descriptors": [
+        "large dragon (chromatic)",
+        "red scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Adult Red Dragon",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "17",
+      "xp": 18000,
+      "visual_descriptors": [
+        "huge dragon (chromatic)",
+        "red scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ancient Red Dragon",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "24",
+      "xp": 62000,
+      "visual_descriptors": [
+        "huge monstrosity",
+        "red scales",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Roc",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "11",
+      "xp": 7200,
+      "visual_descriptors": [
+        "gargantuan monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Rust Monster",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "medium monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Roper",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Aberration",
+      "alignment": "Neutral Evil",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "large aberration",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Salamander",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Elemental",
+      "alignment": "Neutral Evil",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "large elemental",
+        "elemental form"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Sahuagin Warrior",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend",
+      "alignment": "Lawful Evil",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "medium fiend",
+        "fiendish",
+        "claws"
+      ],
+      "typical_equipment": [
+        "spear"
+      ]
+    },
+    {
+      "name": "Satyr",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey",
+      "alignment": "Chaotic Neutral",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "medium fey",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Scout",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "leather armor",
+        "longbow",
+        "longsword"
+      ]
+    },
+    {
+      "name": "Shadow",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Chaotic Evil",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "medium undead",
+        "undead"
+      ],
+      "typical_equipment": [
+        "longbow"
+      ]
+    },
+    {
+      "name": "Sea Hag",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey",
+      "alignment": "Chaotic Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium fey"
+      ],
+      "typical_equipment": [
+        "hide armor"
+      ]
+    },
+    {
+      "name": "Shambling Mound",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Plant",
+      "alignment": "Unaligned",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "large plant",
+        "plant body"
+      ],
+      "typical_equipment": [
+        "shield"
+      ]
+    },
+    {
+      "name": "Shield Guardian",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "7",
+      "xp": 2900,
+      "visual_descriptors": [
+        "large construct",
+        "constructed body"
+      ],
+      "typical_equipment": [
+        "shield"
+      ]
+    },
+    {
+      "name": "Silver Dragon Wyrmling",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Lawful Good",
+      "cr": "3",
+      "xp": null,
+      "visual_descriptors": [
+        "medium dragon (metallic)",
+        "silver scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Adult Silver Dragon",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Metallic)",
+      "alignment": "Lawful Good",
+      "cr": "16",
+      "xp": 15000,
+      "visual_descriptors": [
+        "huge dragon (metallic)",
+        "silver scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Skeleton",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Lawful Evil",
+      "cr": "1/4",
+      "xp": null,
+      "visual_descriptors": [
+        "medium undead",
+        "undead",
+        "exposed bones"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Warhorse Skeleton",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Undead",
+      "alignment": "Lawful Evil",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "large undead",
+        "undead",
+        "exposed bones",
+        "quadruped",
+        "hooves"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Solar",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Celestial (Angel)",
+      "alignment": "Lawful Good",
+      "cr": "21",
+      "xp": 33000,
+      "visual_descriptors": [
+        "large celestial (angel)",
+        "radiant"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Minotaur Skeleton",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Undead",
+      "alignment": "Lawful Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large undead",
+        "undead",
+        "exposed bones"
+      ],
+      "typical_equipment": [
+        "longsword"
+      ]
+    },
+    {
+      "name": "Sphinxes",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Celestial",
+      "alignment": "Lawful Good",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "tiny celestial",
+        "radiant"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Specter",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Chaotic Evil",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "medium undead",
+        "undead",
+        "translucent"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Sphinx of Lore",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Celestial",
+      "alignment": "Lawful Neutral",
+      "cr": "11",
+      "xp": 7200,
+      "visual_descriptors": [
+        "large celestial",
+        "radiant",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Sphinx of Valor",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Celestial",
+      "alignment": "Lawful Neutral",
+      "cr": "17",
+      "xp": 18000,
+      "visual_descriptors": [
+        "large celestial",
+        "radiant",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": [
+        "longsword"
+      ]
+    },
+    {
+      "name": "Spirit Naga",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend",
+      "alignment": "Chaotic Evil",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "large fiend",
+        "fiendish",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Spy",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "crossbow",
+        "longsword"
+      ]
+    },
+    {
+      "name": "Sprite",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Fey",
+      "alignment": "Neutral Good",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "tiny fey"
+      ],
+      "typical_equipment": [
+        "hide armor"
+      ]
+    },
+    {
+      "name": "Stirge",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "1/8",
+      "xp": null,
+      "visual_descriptors": [
+        "tiny monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Stone Golem",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "large construct",
+        "constructed body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Stone Giant",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Giant",
+      "alignment": "Neutral",
+      "cr": "7",
+      "xp": 2900,
+      "visual_descriptors": [
+        "huge giant",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Storm Giant",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "or smaller creature",
+      "alignment": "it has the Prone condition.",
+      "cr": "13",
+      "xp": 10000,
+      "visual_descriptors": [
+        "large or smaller creature",
+        "massive frame"
+      ],
+      "typical_equipment": [
+        "longsword"
+      ]
+    },
+    {
+      "name": "Succubus",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Fiend",
+      "alignment": "Neutral Evil",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "medium fiend",
+        "fiendish"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Tarrasque",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Monstrosity (Titan)",
+      "alignment": "Unaligned",
+      "cr": "30",
+      "xp": 155000,
+      "visual_descriptors": [
+        "gargantuan monstrosity (titan)",
+        "fangs/bite",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": [
+        "crossbow",
+        "leather armor",
+        "mace"
+      ]
+    },
+    {
+      "name": "Tough Boss",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "chain mail",
+        "crossbow"
+      ]
+    },
+    {
+      "name": "Tough",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "1/2",
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Treant",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Plant",
+      "alignment": "Chaotic Good",
+      "cr": "9",
+      "xp": 5000,
+      "visual_descriptors": [
+        "huge plant",
+        "plant body"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Troll",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Giant",
+      "alignment": "Chaotic Evil",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "large giant"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Troll Limb",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Giant",
+      "alignment": "Chaotic Evil",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "small giant"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Vampire Familiar",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral Evil",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "dagger",
+        "shield"
+      ]
+    },
+    {
+      "name": "Vampire Spawn",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Neutral Evil",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "medium undead",
+        "undead",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Vampire",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Lawful Evil",
+      "cr": "6",
+      "xp": 2300,
+      "visual_descriptors": [
+        "medium undead",
+        "undead",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Warrior Infantry",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "1/2",
+      "xp": null,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Vrock",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fiend (Demon)",
+      "alignment": "Chaotic Evil",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "large fiend (demon)",
+        "fiendish"
+      ],
+      "typical_equipment": [
+        "chain mail",
+        "spear"
+      ]
+    },
+    {
+      "name": "Warrior Veteran",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Humanoid",
+      "alignment": "Neutral",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium humanoid",
+        "humanoid"
+      ],
+      "typical_equipment": [
+        "crossbow",
+        "greatsword",
+        "longsword"
+      ]
+    },
+    {
+      "name": "Water Elemental",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Elemental",
+      "alignment": "Neutral",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "large elemental",
+        "elemental form"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Wereboar",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity (Lycanthrope)",
+      "alignment": "Neutral Evil",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "medium monstrosity (lycanthrope)"
+      ],
+      "typical_equipment": [
+        "javelin"
+      ]
+    },
+    {
+      "name": "Wererat",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity (Lycanthrope)",
+      "alignment": "Lawful Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium monstrosity (lycanthrope)",
+        "fangs/bite"
+      ],
+      "typical_equipment": [
+        "crossbow"
+      ]
+    },
+    {
+      "name": "Weretiger",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity (Lycanthrope)",
+      "alignment": "Neutral",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "medium monstrosity (lycanthrope)",
+        "fangs/bite"
+      ],
+      "typical_equipment": [
+        "hide armor",
+        "longbow"
+      ]
+    },
+    {
+      "name": "Werewolf",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity (Lycanthrope)",
+      "alignment": "Chaotic Evil",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "medium monstrosity (lycanthrope)",
+        "quadruped",
+        "fur",
+        "fangs/bite"
+      ],
+      "typical_equipment": [
+        "longbow"
+      ]
+    },
+    {
+      "name": "White Dragon Wyrmling",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "2",
+      "xp": null,
+      "visual_descriptors": [
+        "medium dragon (chromatic)",
+        "white scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Immunities Cold",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "13",
+      "xp": 10000,
+      "visual_descriptors": [
+        "huge dragon (chromatic)"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Young White Dragon",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "6",
+      "xp": null,
+      "visual_descriptors": [
+        "large dragon (chromatic)",
+        "white scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ancient White Dragon",
+      "type": "monster",
+      "dnd_size": "Gargantuan",
+      "canvas_profile": "192x192",
+      "creature_type": "Dragon (Chromatic)",
+      "alignment": "Chaotic Evil",
+      "cr": "20",
+      "xp": null,
+      "visual_descriptors": [
+        "gargantuan dragon (chromatic)",
+        "white scales",
+        "wings",
+        "claws",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Wight",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Neutral Evil",
+      "cr": "20",
+      "xp": 25000,
+      "visual_descriptors": [
+        "medium undead",
+        "undead"
+      ],
+      "typical_equipment": [
+        "leather armor",
+        "longsword"
+      ]
+    },
+    {
+      "name": "Will-o’-Wisp",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Chaotic Evil",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "tiny undead",
+        "undead",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Worg",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Fey",
+      "alignment": "Neutral Evil",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "large fey",
+        "quadruped",
+        "fur",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Wraith",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Neutral Evil",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "large monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Wyvern",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Dragon",
+      "alignment": "Unaligned",
+      "cr": "6",
+      "xp": 2300,
+      "visual_descriptors": [
+        "large dragon"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Zombie",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Undead",
+      "alignment": "Neutral Evil",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "medium undead",
+        "undead",
+        "rotting flesh",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Xorn",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Elemental",
+      "alignment": "Neutral",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium elemental",
+        "elemental form"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Animals",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast (Dinosaur)",
+      "alignment": "Unaligned",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "large beast (dinosaur)",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ape",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium beast",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Ankylosaurus",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast (Dinosaur)",
+      "alignment": "Unaligned",
+      "cr": "3",
+      "xp": null,
+      "visual_descriptors": [
+        "huge beast (dinosaur)",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Bat",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "tiny beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Blood Hawk",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "tiny beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Boar",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": null,
+      "visual_descriptors": [
+        "medium beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Camel",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "large beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Cat",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "tiny beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Brown Bear",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "large beast",
+        "quadruped",
+        "fur",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Constrictor Snake",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "large beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Deer",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "medium beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Dire Wolf",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1",
+      "xp": null,
+      "visual_descriptors": [
+        "large beast",
+        "quadruped",
+        "fur",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Crocodile",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "large beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Draft Horse",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "large beast",
+        "quadruped",
+        "hooves"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Eagle",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "small beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Flying Snake",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Monstrosity",
+      "alignment": "Unaligned",
+      "cr": "1/8",
+      "xp": null,
+      "visual_descriptors": [
+        "tiny monstrosity"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Elephant",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "huge beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Frog",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "tiny beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Ape",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "7",
+      "xp": 2900,
+      "visual_descriptors": [
+        "huge beast",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Boar",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large beast",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Centipede",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "small beast",
+        "massive frame",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Crocodile",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "huge beast",
+        "massive frame",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Constrictor Snake",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "5",
+      "xp": 1800,
+      "visual_descriptors": [
+        "huge beast",
+        "massive frame",
+        "fangs/bite",
+        "tail"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Eagle",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "medium beast",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Fire Beetle",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "small beast",
+        "massive frame",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Resistances Fire",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "large beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Frog",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "medium beast",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Hyena",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "large beast",
+        "massive frame",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Lizard",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "large beast",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Octopus",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1",
+      "xp": null,
+      "visual_descriptors": [
+        "large beast",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Rat",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "small beast",
+        "massive frame",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Shark",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "huge beast",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Scorpion",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "large beast",
+        "massive frame",
+        "fangs/bite",
+        "claws"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Seahorse",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": null,
+      "visual_descriptors": [
+        "large beast",
+        "quadruped",
+        "hooves",
+        "massive frame",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Spider",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "large beast",
+        "eight legs",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Venomous Snake",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "medium beast",
+        "massive frame",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Vulture",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Monstrosity",
+      "alignment": "Neutral Evil",
+      "cr": "1",
+      "xp": null,
+      "visual_descriptors": [
+        "large monstrosity",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Toad",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "large beast",
+        "massive frame",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Wasp",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "medium beast",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Giant Weasel",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "medium beast",
+        "massive frame"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Hawk",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "tiny beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Hippopotamus",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "4",
+      "xp": 1100,
+      "visual_descriptors": [
+        "large beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Jackal",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": null,
+      "visual_descriptors": [
+        "small beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Hunter Shark",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Killer Whale",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "3",
+      "xp": 700,
+      "visual_descriptors": [
+        "huge beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Lion",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1",
+      "xp": 200,
+      "visual_descriptors": [
+        "large beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Lizard",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": null,
+      "visual_descriptors": [
+        "tiny beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Mastiff",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "medium beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Mule",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/8",
+      "xp": null,
+      "visual_descriptors": [
+        "medium beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Mammoth",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/8",
+      "xp": 25,
+      "visual_descriptors": [
+        "huge beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Octopus",
+      "type": "monster",
+      "dnd_size": "Small",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "small beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Piranha",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "tiny beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Panther",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": null,
+      "visual_descriptors": [
+        "medium beast"
+      ],
+      "typical_equipment": [
+        "hide armor"
+      ]
+    },
+    {
+      "name": "Plesiosaurus",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast (Dinosaur)",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large beast (dinosaur)",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Polar Bear",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large beast",
+        "quadruped",
+        "fur",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Pteranodon",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast (Dinosaur)",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": null,
+      "visual_descriptors": [
+        "medium beast (dinosaur)"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Raven",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "tiny beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Reef Shark",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "medium beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Saber-Toothed Tiger",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Rhinoceros",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "large beast"
+      ],
+      "typical_equipment": [
+        "hide armor"
+      ]
+    },
+    {
+      "name": "Scorpion",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": null,
+      "visual_descriptors": [
+        "tiny beast"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Riding Horse",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "large beast",
+        "quadruped",
+        "hooves"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Seahorse",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 0,
+      "visual_descriptors": [
+        "tiny beast",
+        "quadruped",
+        "hooves",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Swarm of Insects",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Swarm of Tiny Beasts",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": null,
+      "visual_descriptors": [
+        "medium swarm of tiny beasts"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Spider",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "tiny beast",
+        "eight legs",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Swarm of Bats",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Swarm of Tiny Beasts",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": null,
+      "visual_descriptors": [
+        "large swarm of tiny beasts",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Swarm of Rats",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Swarm of Tiny Beasts",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "medium swarm of tiny beasts"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Swarm of Ravens",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Swarm of Tiny Beasts",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "visual_descriptors": [
+        "medium swarm of tiny beasts"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Swarm of Venomous Snakes",
+      "type": "monster",
+      "dnd_size": "Medium",
+      "canvas_profile": "64x64",
+      "creature_type": "Swarm of Tiny Beasts",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "visual_descriptors": [
+        "medium swarm of tiny beasts"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Tyrannosaurus Rex",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast (Dinosaur)",
+      "alignment": "Unaligned",
+      "cr": "8",
+      "xp": null,
+      "visual_descriptors": [
+        "huge beast (dinosaur)",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Tiger",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "8",
+      "xp": 3900,
+      "visual_descriptors": [
+        "large beast",
+        "fangs/bite",
+        "tail"
+      ],
+      "typical_equipment": [
+        "hide armor"
+      ]
+    },
+    {
+      "name": "Triceratops",
+      "type": "monster",
+      "dnd_size": "Huge",
+      "canvas_profile": "192x192",
+      "creature_type": "Beast (Dinosaur)",
+      "alignment": "Unaligned",
+      "cr": "5",
+      "xp": null,
+      "visual_descriptors": [
+        "huge beast (dinosaur)"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Warhorse",
+      "type": "monster",
+      "dnd_size": "Large",
+      "canvas_profile": "128x128",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "1/2",
+      "xp": 100,
+      "visual_descriptors": [
+        "large beast",
+        "quadruped",
+        "hooves"
+      ],
+      "typical_equipment": null
+    },
+    {
+      "name": "Weasel",
+      "type": "monster",
+      "dnd_size": "Tiny",
+      "canvas_profile": "64x64",
+      "creature_type": "Beast",
+      "alignment": "Unaligned",
+      "cr": "0",
+      "xp": 10,
+      "visual_descriptors": [
+        "tiny beast",
+        "fangs/bite"
+      ],
+      "typical_equipment": null
+    }
+  ]
+}
