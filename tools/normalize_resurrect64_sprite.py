@@ -65,6 +65,15 @@ def nearest_palette_color(
     return best
 
 
+def n_nearest_palette_colors(
+    rgb: tuple[int, int, int],
+    palette_rgb: list[tuple[int, int, int]],
+    n: int = 4,
+) -> list[tuple[int, int, int]]:
+    ranked = sorted(palette_rgb, key=lambda c: color_distance_sq(rgb, c))
+    return ranked[:n]
+
+
 def flood_fill_label(
     opaque: dict[tuple[int, int], tuple[int, int, int]],
 ) -> dict[tuple[int, int], int]:
@@ -194,6 +203,8 @@ def normalize_sprite(
         warnings.append(f"fringe removal: cleared {fringe_removed} pixels")
 
     # --- Stage 4: Palette quantization ---
+    # Store original colors for diversity boost
+    original_colors: dict[tuple[int, int], tuple[int, int, int]] = {}
     quant_changed = 0
     for y in range(target_h):
         for x in range(target_w):
@@ -202,6 +213,7 @@ def normalize_sprite(
                 px[x, y] = (0, 0, 0, 0)
                 continue
             rgb = (r, g, b)
+            original_colors[(x, y)] = rgb
             nearest = nearest_palette_color(rgb, palette_rgb, lut)
             if nearest != rgb:
                 quant_changed += 1
@@ -269,6 +281,154 @@ def normalize_sprite(
                     dither_fixed += 1
         if dither_fixed:
             warnings.append(f"dither cleanup: smoothed {dither_fixed} pixels")
+
+    # --- Stage 5c: Color diversity boost (post-cleanup) ---
+    color_rule = profile["unique_opaque_colors"]
+    unique_before = len(set(opaque.values()))
+    diversity_added = 0
+
+    if unique_before < color_rule["min"]:
+        needed = color_rule["min"] - unique_before
+        current_colors = set(opaque.values())
+        palette_counts = Counter(opaque.values())
+        dominant_sorted = palette_counts.most_common()
+
+        for dominant_color, count in dominant_sorted:
+            if needed <= 0:
+                break
+            if count < 4:
+                continue
+
+            candidates: list[tuple[int, tuple[int, int], tuple[int, int, int]]] = []
+            for pos, qcolor in opaque.items():
+                if qcolor != dominant_color:
+                    continue
+                orig = original_colors.get(pos)
+                if orig is None:
+                    continue
+                dist_to_dominant = color_distance_sq(orig, dominant_color)
+                if dist_to_dominant < 10:
+                    continue
+                nearest_n = n_nearest_palette_colors(orig, palette_rgb, 4)
+                alt = None
+                for c in nearest_n:
+                    if c != dominant_color and c not in current_colors:
+                        alt = c
+                        break
+                if alt is None:
+                    continue
+                candidates.append((dist_to_dominant, pos, alt))
+
+            if not candidates:
+                continue
+
+            candidates.sort(reverse=True, key=lambda t: t[0])
+            best_alt = candidates[0][2]
+            max_remap = count - 1
+            remapped = 0
+            for _, pos, alt in candidates:
+                if alt != best_alt:
+                    continue
+                if remapped >= max_remap:
+                    break
+                opaque[pos] = best_alt
+                px[pos[0], pos[1]] = (*best_alt, 255)
+                remapped += 1
+
+            if remapped > 0:
+                current_colors = set(opaque.values())
+                diversity_added += 1
+                needed = color_rule["min"] - len(current_colors)
+
+        if needed > 0:
+            for dominant_color, count in dominant_sorted:
+                if needed <= 0:
+                    break
+                if count < 4:
+                    continue
+
+                split_candidates: list[tuple[int, tuple[int, int], tuple[int, int, int]]] = []
+                for pos, qcolor in opaque.items():
+                    if qcolor != dominant_color:
+                        continue
+                    orig = original_colors.get(pos)
+                    if orig is None:
+                        continue
+                    nearest_n = n_nearest_palette_colors(orig, palette_rgb, 6)
+                    alt = None
+                    for c in nearest_n:
+                        if c != dominant_color and c not in current_colors:
+                            alt = c
+                            break
+                    if alt is None:
+                        continue
+                    dist = color_distance_sq(orig, dominant_color)
+                    split_candidates.append((dist, pos, alt))
+
+                if not split_candidates:
+                    continue
+
+                split_candidates.sort(reverse=True, key=lambda t: t[0])
+                best_alt = split_candidates[0][2]
+                live_count = sum(1 for c in opaque.values() if c == dominant_color)
+                to_remap = min(max(2, count // 3), live_count - 1)
+                if to_remap < 1:
+                    continue
+                remapped = 0
+                for _, pos, alt in split_candidates:
+                    if alt != best_alt:
+                        continue
+                    if remapped >= to_remap:
+                        break
+                    opaque[pos] = alt
+                    px[pos[0], pos[1]] = (*alt, 255)
+                    remapped += 1
+
+                if remapped > 0:
+                    current_colors = set(opaque.values())
+                    diversity_added += 1
+                    needed = color_rule["min"] - len(current_colors)
+
+        if needed > 0:
+            palette_counts = Counter(opaque.values())
+            dominant_sorted = palette_counts.most_common()
+            for dominant_color, count in dominant_sorted:
+                if needed <= 0:
+                    break
+                if count < 6:
+                    continue
+                nearest_to_dom = n_nearest_palette_colors(
+                    dominant_color, palette_rgb, 8
+                )
+                alt = None
+                for c in nearest_to_dom:
+                    if c != dominant_color and c not in current_colors:
+                        alt = c
+                        break
+                if alt is None:
+                    continue
+                positions = [p for p, c in opaque.items() if c == dominant_color]
+                positions.sort(
+                    key=lambda p: color_distance_sq(
+                        original_colors.get(p, dominant_color), dominant_color
+                    ),
+                    reverse=True,
+                )
+                to_remap = min(max(2, count // 4), count - 1)
+                if to_remap < 1:
+                    continue
+                for pos in positions[:to_remap]:
+                    opaque[pos] = alt
+                    px[pos[0], pos[1]] = (*alt, 255)
+                current_colors = set(opaque.values())
+                diversity_added += 1
+                needed = color_rule["min"] - len(current_colors)
+
+    if diversity_added:
+        warnings.append(
+            f"diversity boost: added {diversity_added} colors "
+            f"({unique_before} -> {len(set(opaque.values()))})"
+        )
 
     # --- Stage 6: Color count enforcement ---
     color_rule = profile["unique_opaque_colors"]
@@ -351,11 +511,78 @@ def normalize_sprite(
             f"(limit {white_max})"
         )
 
-    # --- Final bbox check ---
+    # --- Stage 8b: White cluster splitting ---
+    cluster_max = profile.get("largest_white_connected_cluster_max")
+    if cluster_max:
+        white_only = {pos: c for pos, c in opaque.items() if c == white_rgb}
+        if white_only:
+            w_labels = flood_fill_label(white_only)
+            w_sizes = cluster_sizes(w_labels)
+            w_split = 0
+            for lid, size in w_sizes.items():
+                if size <= cluster_max:
+                    continue
+                pixels = sorted(
+                    [pos for pos, l in w_labels.items() if l == lid],
+                    key=lambda p: (p[1], p[0]),
+                )
+                for pos in pixels[cluster_max:]:
+                    neighbors = get_neighbor_colors(pos[0], pos[1], opaque)
+                    neighbors = [c for c in neighbors if c != white_rgb]
+                    if neighbors:
+                        replacement = Counter(neighbors).most_common(1)[0][0]
+                    else:
+                        replacement = nearest_palette_color(
+                            (240, 240, 240), palette_rgb, lut
+                        )
+                        if replacement == white_rgb:
+                            replacement = palette_rgb[0]
+                    opaque[pos] = replacement
+                    px[pos[0], pos[1]] = (*replacement, 255)
+                    w_split += 1
+            if w_split:
+                warnings.append(
+                    f"white cluster split: replaced {w_split} excess "
+                    f"white pixels (cluster max {cluster_max})"
+                )
+
+    # --- Final bbox check (with trim attempt) ---
     if opaque:
         ys = [y for _, y in opaque]
-        bbox_h = max(ys) - min(ys) + 1
+        min_y, max_y = min(ys), max(ys)
+        bbox_h = max_y - min_y + 1
         bbox_rule = profile["occupied_bbox_height_px"]
+
+        if bbox_h > bbox_rule["max"]:
+            excess = bbox_h - bbox_rule["max"]
+            max_trim = target_h // 8
+            if excess <= max_trim:
+                trim_top = excess // 2
+                trim_bot = excess - trim_top
+                trimmed = 0
+                for _ in range(trim_top):
+                    row_y = min(y for _, y in opaque)
+                    row_pixels = [p for p in opaque if p[1] == row_y]
+                    for pos in row_pixels:
+                        px[pos[0], pos[1]] = (0, 0, 0, 0)
+                        del opaque[pos]
+                        trimmed += 1
+                for _ in range(trim_bot):
+                    row_y = max(y for _, y in opaque)
+                    row_pixels = [p for p in opaque if p[1] == row_y]
+                    for pos in row_pixels:
+                        px[pos[0], pos[1]] = (0, 0, 0, 0)
+                        del opaque[pos]
+                        trimmed += 1
+                if trimmed:
+                    warnings.append(
+                        f"bbox trim: cleared {trimmed} pixels from "
+                        f"{excess} excess rows ({bbox_h}px -> "
+                        f"{bbox_rule['max']}px)"
+                    )
+                    ys = [y for _, y in opaque]
+                    bbox_h = max(ys) - min(ys) + 1
+
         if not (bbox_rule["min"] <= bbox_h <= bbox_rule["max"]):
             return False, [
                 f"REJECT: occupied bounding-box height {bbox_h}px outside "
