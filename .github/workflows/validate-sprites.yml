@@ -1,0 +1,51 @@
+name: Validate Sprite Art
+
+on:
+  pull_request:
+    paths:
+      - "assets/sprites/**/*.png"
+      - "art/sprite-palettes/resurrect64_sprite_profiles.json"
+      - "tools/validate_resurrect64_sprites.py"
+      - "tools/normalize_resurrect64_sprite.py"
+      - ".github/workflows/validate-sprites.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "assets/sprites/**/*.png"
+      - "art/sprite-palettes/resurrect64_sprite_profiles.json"
+      - "tools/validate_resurrect64_sprites.py"
+      - "tools/normalize_resurrect64_sprite.py"
+      - ".github/workflows/validate-sprites.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-sprites:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check Pillow==12.3.0
+
+      - name: Check palette coverage invariant
+        run: |
+          python tools/validate_resurrect64_sprites.py \
+            --config art/sprite-palettes/resurrect64_sprite_profiles.json \
+            --check-invariants
+
+      - name: Validate sprite PNGs
+        run: |
+          python tools/validate_resurrect64_sprites.py \
+            --config art/sprite-palettes/resurrect64_sprite_profiles.json \
+            --root assets/sprites

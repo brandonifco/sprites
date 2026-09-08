@@ -1,0 +1,519 @@
+"schema_version": 1
+"palette":
+  "name": "Resurrect 64"
+  "creator": "Kerrie Lake"
+  "transparent_rgba": "#00000000"
+  "opaque_alpha": 255
+  "allowed_alpha_values":
+    - 0
+    - 255
+  "colors":
+    -
+      "id": "R64-00"
+      "hex": "#2e222f"
+    -
+      "id": "R64-01"
+      "hex": "#3e3546"
+    -
+      "id": "R64-02"
+      "hex": "#625565"
+    -
+      "id": "R64-03"
+      "hex": "#966c6c"
+    -
+      "id": "R64-04"
+      "hex": "#ab947a"
+    -
+      "id": "R64-05"
+      "hex": "#694f62"
+    -
+      "id": "R64-06"
+      "hex": "#7f708a"
+    -
+      "id": "R64-07"
+      "hex": "#9babb2"
+    -
+      "id": "R64-08"
+      "hex": "#c7dcd0"
+    -
+      "id": "R64-09"
+      "hex": "#ffffff"
+    -
+      "id": "R64-10"
+      "hex": "#6e2727"
+    -
+      "id": "R64-11"
+      "hex": "#b33831"
+    -
+      "id": "R64-12"
+      "hex": "#ea4f36"
+    -
+      "id": "R64-13"
+      "hex": "#f57d4a"
+    -
+      "id": "R64-14"
+      "hex": "#ae2334"
+    -
+      "id": "R64-15"
+      "hex": "#e83b3b"
+    -
+      "id": "R64-16"
+      "hex": "#fb6b1d"
+    -
+      "id": "R64-17"
+      "hex": "#f79617"
+    -
+      "id": "R64-18"
+      "hex": "#f9c22b"
+    -
+      "id": "R64-19"
+      "hex": "#7a3045"
+    -
+      "id": "R64-20"
+      "hex": "#9e4539"
+    -
+      "id": "R64-21"
+      "hex": "#cd683d"
+    -
+      "id": "R64-22"
+      "hex": "#e6904e"
+    -
+      "id": "R64-23"
+      "hex": "#fbb954"
+    -
+      "id": "R64-24"
+      "hex": "#4c3e24"
+    -
+      "id": "R64-25"
+      "hex": "#676633"
+    -
+      "id": "R64-26"
+      "hex": "#a2a947"
+    -
+      "id": "R64-27"
+      "hex": "#d5e04b"
+    -
+      "id": "R64-28"
+      "hex": "#fbff86"
+    -
+      "id": "R64-29"
+      "hex": "#165a4c"
+    -
+      "id": "R64-30"
+      "hex": "#239063"
+    -
+      "id": "R64-31"
+      "hex": "#1ebc73"
+    -
+      "id": "R64-32"
+      "hex": "#91db69"
+    -
+      "id": "R64-33"
+      "hex": "#cddf6c"
+    -
+      "id": "R64-34"
+      "hex": "#313638"
+    -
+      "id": "R64-35"
+      "hex": "#374e4a"
+    -
+      "id": "R64-36"
+      "hex": "#547e64"
+    -
+      "id": "R64-37"
+      "hex": "#92a984"
+    -
+      "id": "R64-38"
+      "hex": "#b2ba90"
+    -
+      "id": "R64-39"
+      "hex": "#0b5e65"
+    -
+      "id": "R64-40"
+      "hex": "#0b8a8f"
+    -
+      "id": "R64-41"
+      "hex": "#0eaf9b"
+    -
+      "id": "R64-42"
+      "hex": "#30e1b9"
+    -
+      "id": "R64-43"
+      "hex": "#8ff8e2"
+    -
+      "id": "R64-44"
+      "hex": "#323353"
+    -
+      "id": "R64-45"
+      "hex": "#484a77"
+    -
+      "id": "R64-46"
+      "hex": "#4d65b4"
+    -
+      "id": "R64-47"
+      "hex": "#4d9be6"
+    -
+      "id": "R64-48"
+      "hex": "#8fd3ff"
+    -
+      "id": "R64-49"
+      "hex": "#45293f"
+    -
+      "id": "R64-50"
+      "hex": "#6b3e75"
+    -
+      "id": "R64-51"
+      "hex": "#905ea9"
+    -
+      "id": "R64-52"
+      "hex": "#a884f3"
+    -
+      "id": "R64-53"
+      "hex": "#eaaded"
+    -
+      "id": "R64-54"
+      "hex": "#753c54"
+    -
+      "id": "R64-55"
+      "hex": "#a24b6f"
+    -
+      "id": "R64-56"
+      "hex": "#cf657f"
+    -
+      "id": "R64-57"
+      "hex": "#ed8099"
+    -
+      "id": "R64-58"
+      "hex": "#831c5d"
+    -
+      "id": "R64-59"
+      "hex": "#c32454"
+    -
+      "id": "R64-60"
+      "hex": "#f04f78"
+    -
+      "id": "R64-61"
+      "hex": "#f68181"
+    -
+      "id": "R64-62"
+      "hex": "#fca790"
+    -
+      "id": "R64-63"
+      "hex": "#fdcbb0"
+"profiles":
+  "64x64":
+    "width": 64
+    "height": 64
+    "unique_opaque_colors":
+      "min": 12
+      "max": 22
+    "major_material_ramp_colors":
+      "min": 3
+      "max": 4
+    "minor_material_ramp_colors":
+      "min": 1
+      "max": 2
+    "exterior_contour_px":
+      "min": 1
+      "max": 1
+    "dithering":
+      "allowed": false
+      "max_opaque_fraction": 0.0
+    "r64_09_white_pixels_max": 8
+    "occupied_bbox_height_px":
+      "min": 48
+      "max": 60
+    "largest_white_connected_cluster_max": 4
+    "minimum_distinct_palette_value_levels": 3
+    "fine_texture_cluster_max":
+      "width": 2
+      "height": 2
+    "opaque_edge_contact_allowed": false
+  "128x128":
+    "width": 128
+    "height": 128
+    "unique_opaque_colors":
+      "min": 18
+      "max": 30
+    "major_material_ramp_colors":
+      "min": 3
+      "max": 5
+    "minor_material_ramp_colors":
+      "min": 1
+      "max": 3
+    "exterior_contour_px":
+      "min": 1
+      "max": 2
+      "two_px_only_for_contact_shadow": true
+    "dithering":
+      "allowed": true
+      "rough_materials_only": true
+      "max_opaque_fraction": 0.1
+    "r64_09_white_pixels_max": 24
+    "occupied_bbox_height_px":
+      "min": 96
+      "max": 121
+    "largest_white_connected_cluster_max": 9
+    "minimum_distinct_palette_value_levels": 4
+    "fine_texture_cluster_max":
+      "width": 3
+      "height": 3
+    "opaque_edge_contact_allowed": false
+  "192x192":
+    "width": 192
+    "height": 192
+    "unique_opaque_colors":
+      "min": 24
+      "max": 40
+    "major_material_ramp_colors":
+      "min": 4
+      "max": 6
+    "minor_material_ramp_colors":
+      "min": 1
+      "max": 3
+    "exterior_contour_px":
+      "min": 1
+      "max": 2
+      "uniform_two_px_border_allowed": false
+    "dithering":
+      "allowed": true
+      "rough_materials_only": true
+      "max_opaque_fraction": 0.15
+    "r64_09_white_pixels_max": 48
+    "occupied_bbox_height_px":
+      "min": 154
+      "max": 184
+    "largest_white_connected_cluster_max": 16
+    "minimum_distinct_palette_value_levels": 5
+    "fine_texture_cluster_max":
+      "width": 4
+      "height": 4
+    "opaque_edge_contact_allowed": false
+"ramp_families":
+  "OUTLINE-WARM":
+    - "R64-00"
+    - "R64-01"
+    - "R64-02"
+  "OUTLINE-COOL":
+    - "R64-34"
+    - "R64-44"
+    - "R64-45"
+  "OUTLINE-VIOLET":
+    - "R64-49"
+    - "R64-50"
+  "METAL-IRON":
+    - "R64-34"
+    - "R64-35"
+    - "R64-07"
+    - "R64-08"
+    - "R64-09"
+  "METAL-BLUE":
+    - "R64-44"
+    - "R64-45"
+    - "R64-07"
+    - "R64-08"
+    - "R64-09"
+  "LEATHER-BROWN":
+    - "R64-24"
+    - "R64-20"
+    - "R64-21"
+    - "R64-22"
+    - "R64-23"
+  "LEATHER-RED":
+    - "R64-10"
+    - "R64-11"
+    - "R64-12"
+    - "R64-13"
+  "WOOD":
+    - "R64-24"
+    - "R64-20"
+    - "R64-04"
+    - "R64-22"
+    - "R64-23"
+  "CLOTH-RED":
+    - "R64-10"
+    - "R64-14"
+    - "R64-15"
+    - "R64-13"
+  "CLOTH-ORANGE":
+    - "R64-20"
+    - "R64-21"
+    - "R64-22"
+    - "R64-23"
+  "CLOTH-YELLOW":
+    - "R64-25"
+    - "R64-26"
+    - "R64-27"
+    - "R64-28"
+  "CLOTH-OLIVE":
+    - "R64-24"
+    - "R64-25"
+    - "R64-26"
+    - "R64-27"
+  "CLOTH-GREEN":
+    - "R64-29"
+    - "R64-30"
+    - "R64-31"
+    - "R64-32"
+    - "R64-33"
+  "CLOTH-SAGE":
+    - "R64-35"
+    - "R64-36"
+    - "R64-37"
+    - "R64-38"
+  "CLOTH-TEAL":
+    - "R64-39"
+    - "R64-40"
+    - "R64-41"
+    - "R64-42"
+    - "R64-43"
+  "CLOTH-BLUE":
+    - "R64-44"
+    - "R64-45"
+    - "R64-46"
+    - "R64-47"
+    - "R64-48"
+  "CLOTH-VIOLET":
+    - "R64-49"
+    - "R64-50"
+    - "R64-51"
+    - "R64-52"
+    - "R64-53"
+  "CLOTH-ROSE":
+    - "R64-54"
+    - "R64-55"
+    - "R64-56"
+    - "R64-57"
+  "CLOTH-MAGENTA":
+    - "R64-58"
+    - "R64-59"
+    - "R64-60"
+    - "R64-61"
+    - "R64-62"
+  "SKIN-DARK":
+    - "R64-19"
+    - "R64-20"
+    - "R64-21"
+    - "R64-22"
+    - "R64-23"
+  "SKIN-MEDIUM":
+    - "R64-03"
+    - "R64-04"
+    - "R64-21"
+    - "R64-22"
+    - "R64-62"
+  "SKIN-LIGHT":
+    - "R64-03"
+    - "R64-04"
+    - "R64-61"
+    - "R64-62"
+    - "R64-63"
+  "SKIN-COOL":
+    - "R64-05"
+    - "R64-03"
+    - "R64-54"
+    - "R64-61"
+    - "R64-62"
+  "BONE":
+    - "R64-24"
+    - "R64-04"
+    - "R64-08"
+    - "R64-09"
+  "MAGIC-TEAL":
+    - "R64-39"
+    - "R64-40"
+    - "R64-41"
+    - "R64-42"
+    - "R64-43"
+  "MAGIC-BLUE":
+    - "R64-44"
+    - "R64-46"
+    - "R64-47"
+    - "R64-48"
+    - "R64-09"
+  "MAGIC-VIOLET":
+    - "R64-49"
+    - "R64-50"
+    - "R64-51"
+    - "R64-52"
+    - "R64-53"
+  "MAGIC-ROSE":
+    - "R64-54"
+    - "R64-55"
+    - "R64-56"
+    - "R64-57"
+    - "R64-63"
+  "BLOOD":
+    - "R64-10"
+    - "R64-14"
+    - "R64-15"
+  "NEUTRAL-COOL":
+    - "R64-01"
+    - "R64-05"
+    - "R64-06"
+    - "R64-07"
+    - "R64-08"
+    - "R64-09"
+  "WARM-GOLD":
+    - "R64-20"
+    - "R64-21"
+    - "R64-16"
+    - "R64-17"
+    - "R64-18"
+  "FIRE":
+    - "R64-10"
+    - "R64-14"
+    - "R64-16"
+    - "R64-17"
+    - "R64-18"
+"creature_size_mapping":
+  "Tiny": "64x64"
+  "Small": "64x64"
+  "Medium": "64x64"
+  "Large": "128x128"
+  "Huge": "192x192"
+  "Gargantuan": "192x192"
+"frame_sets":
+  "monster":
+    "mandatory":
+      - "idle"
+      - "attack"
+      - "death"
+    "optional": []
+  "player":
+    "mandatory":
+      - "idle"
+      - "attack"
+      - "hit"
+      - "death"
+      - "cast"
+    "optional": []
+"ci":
+  "default_sprite_root": "assets/sprites"
+  "profile_directories":
+    "64x64": "64x64"
+    "128x128": "128x128"
+    "192x192": "192x192"
+  "machine_enforced_rules":
+    - "dimensions"
+    - "alpha_binary"
+    - "palette_membership"
+    - "unique_opaque_color_count"
+    - "r64_09_white_pixel_limit"
+    - "occupied_bbox_height"
+    - "largest_white_connected_cluster"
+    - "no_opaque_canvas_edge_contact"
+    - "minimum_distinct_value_levels"
+    - "dithering_fraction"
+    - "palette_coverage_invariant"
+  "non_machine_enforced_rules":
+    - "semantic_material_ramp_assignment"
+    - "dithering_material_semantics"
+    - "outline_semantics"
+    - "silhouette_readability"
+    - "pose_readability"
+    - "equipment_readability"
+    - "same_entity_material_identity"
+    - "fine_texture_semantics"
+  "invariants":
+    "every_palette_color_in_at_least_one_family": true
