@@ -1,0 +1,21 @@
+{
+  "codex": {
+    "api_base": "https://api.openai.com/v1",
+    "model": "gpt-image-1",
+    "quality": "medium",
+    "size": "1024x1024",
+    "max_retries": 3,
+    "retry_delay_seconds": 5,
+    "notes": "When you ask Luna to generate an image in ChatGPT, it delegates to gpt-image-1. This calls that model directly. Quality 'medium' matches medium effort."
+  },
+  "pipeline": {
+    "config_path": "art/sprite-palettes/resurrect64_sprite_profiles.json",
+    "specs_dir": "art/asset-specs",
+    "staging_raw_dir": "staging/raw",
+    "staging_normalized_dir": "staging/normalized",
+    "assets_dir": "assets/sprites",
+    "default_frames": ["idle"],
+    "skip_existing": true,
+    "max_generation_attempts": 3
+  }
+}

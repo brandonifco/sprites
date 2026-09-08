@@ -6,3 +6,8 @@ Thumbs.db
 dist/
 build/
 .venv/
+
+# Pipeline staging (intermediate files, not final assets)
+staging/raw/
+staging/normalized/
+staging/rejects/
