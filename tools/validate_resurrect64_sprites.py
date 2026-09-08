@@ -4,8 +4,9 @@ from __future__ import annotations
 import argparse
 import colorsys
 import json
+import re
 import sys
-from collections import deque
+from collections import Counter, defaultdict, deque
 from pathlib import Path
 
 from PIL import Image
@@ -236,6 +237,73 @@ def validate_png(path: Path, profile_name: str, cfg: dict) -> list[str]:
     return errors
 
 
+SLUG_RE = re.compile(r"^[a-z0-9]+(?:_[a-z0-9]+)*$")
+VALID_FRAMES = {"idle", "attack", "hit", "death", "cast"}
+
+
+def parse_sprite_filename(path: Path) -> tuple[str | None, str | None]:
+    stem = path.stem
+    if not SLUG_RE.match(stem):
+        return None, None
+    parts = stem.rsplit("_", 1)
+    if len(parts) != 2:
+        return None, None
+    entity_slug, frame = parts
+    if frame not in VALID_FRAMES:
+        return None, None
+    if not SLUG_RE.match(entity_slug):
+        return None, None
+    return entity_slug, frame
+
+
+def get_opaque_palette(path: Path) -> set[tuple[int, int, int]] | None:
+    try:
+        img = Image.open(path).convert("RGBA")
+    except Exception:
+        return None
+    px = img.load()
+    colors: set[tuple[int, int, int]] = set()
+    for y in range(img.height):
+        for x in range(img.width):
+            r, g, b, a = px[x, y]
+            if a == 255:
+                colors.add((r, g, b))
+    return colors
+
+
+def validate_multi_frame_consistency(
+    entity_files: dict[str, list[Path]],
+) -> list[str]:
+    errors: list[str] = []
+    for slug, paths in sorted(entity_files.items()):
+        if len(paths) < 2:
+            continue
+        palettes: dict[Path, set[tuple[int, int, int]]] = {}
+        for p in paths:
+            colors = get_opaque_palette(p)
+            if colors is not None:
+                palettes[p] = colors
+        if len(palettes) < 2:
+            continue
+        reference_path = sorted(palettes.keys())[0]
+        reference_colors = palettes[reference_path]
+        for p in sorted(palettes.keys()):
+            if p == reference_path:
+                continue
+            drift = palettes[p] - reference_colors
+            new_in_ref = reference_colors - palettes[p]
+            if drift:
+                hex_list = ", ".join(
+                    f"#{r:02x}{g:02x}{b:02x}" for r, g, b in sorted(drift)
+                )
+                errors.append(
+                    f"palette drift in '{slug}': {p.name} introduces "
+                    f"{len(drift)} color(s) not in {reference_path.name}: "
+                    f"{hex_list}"
+                )
+    return errors
+
+
 def collect_pngs(root: Path) -> list[Path]:
     return sorted(p for p in root.rglob("*.png") if p.is_file())
 
@@ -276,6 +344,7 @@ def main() -> int:
 
     failures = 0
     checked = 0
+    entity_files: dict[str, list[Path]] = defaultdict(list)
 
     for path in files:
         if path.suffix.lower() != ".png":
@@ -290,6 +359,15 @@ def main() -> int:
             failures += 1
             continue
 
+        slug, frame = parse_sprite_filename(path)
+        if slug is None:
+            print(
+                f"WARN {path}: filename does not match naming convention "
+                f"(expected {{entity_slug}}_{{frame}}.png)"
+            )
+        else:
+            entity_files[slug].append(path)
+
         checked += 1
         errors = validate_png(path, profile, cfg)
         if errors:
@@ -299,6 +377,14 @@ def main() -> int:
                 print(f"  - {e}")
         else:
             print(f"PASS {path} [{profile}]")
+
+    if entity_files:
+        consistency_errors = validate_multi_frame_consistency(entity_files)
+        if consistency_errors:
+            print("\nMulti-frame consistency:")
+            for e in consistency_errors:
+                print(f"  - {e}")
+            failures += len(consistency_errors)
 
     if checked == 0 and not args.check_invariants:
         fail("no PNG files checked")
