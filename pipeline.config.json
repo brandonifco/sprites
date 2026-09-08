@@ -1,12 +1,9 @@
 {
   "codex": {
-    "api_base": "https://api.openai.com/v1",
-    "model": "gpt-image-1",
-    "quality": "medium",
-    "size": "1024x1024",
-    "max_retries": 3,
-    "retry_delay_seconds": 5,
-    "notes": "When you ask Luna to generate an image in ChatGPT, it delegates to gpt-image-1. This calls that model directly. Quality 'medium' matches medium effort."
+    "method": "cli",
+    "cli_command": "npx @openai/codex exec",
+    "sandbox": "workspace-write",
+    "notes": "Uses ~/.codex/config.toml settings (gpt-5.6-luna, medium effort). Authenticates via ChatGPT Pro session — no API key needed."
   },
   "pipeline": {
     "config_path": "art/sprite-palettes/resurrect64_sprite_profiles.json",
