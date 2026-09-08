@@ -261,7 +261,9 @@ def build_prompt(spec: dict, cfg: dict, frame: str = "idle") -> str:
     lines.append("- Binary alpha only: each pixel is fully opaque (255) or fully transparent (0)")
     lines.append(f"- 1-pixel dark outline around the entire sprite exterior")
     bbox = profile["occupied_bbox_height_px"]
-    lines.append(f"- Sprite height should fill {bbox['min']}-{bbox['max']}px of the {h}px canvas")
+    lines.append(f"- IMPORTANT: The sprite MUST fill {bbox['min']}-{bbox['max']}px of the {h}px canvas height.")
+    lines.append(f"  Draw the subject LARGE — it must occupy most of the canvas vertically.")
+    lines.append(f"  Scale the creature up to fill the space regardless of its real-world size.")
     lines.append("- No opaque pixels touching the canvas edge (1px margin all around)")
     colors = profile["unique_opaque_colors"]
     lines.append(f"- IMPORTANT: Use AT LEAST {colors['min']} visually distinct colors (up to {colors['max']})")
