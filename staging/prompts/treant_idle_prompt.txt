@@ -18,14 +18,23 @@ Lighting: Primary light from upper-left. Highlights land on top-left surfaces; c
 - 1-pixel dark outline around the entire sprite exterior
 - Sprite height should fill 154-184px of the 192px canvas
 - No opaque pixels touching the canvas edge (1px margin all around)
-- Use 24-40 unique colors total
+- IMPORTANT: Use AT LEAST 24 visually distinct colors (up to 40)
+  This means 24+ clearly different hues/values across the whole sprite.
+  Even a single-material creature needs shadows, midtones, highlights, and
+  secondary details (eyes, underside, scars, texture variation) in different colors.
 - Dithering allowed sparingly (max 15% of opaque pixels), rough materials only
 
 == COLOR PALETTE — USE ONLY THESE COLORS ==
 Outline: near-black warm purple-brown
 
 Material colors (use the described color ramp for each body part):
-  • body: deep forest green → emerald → bright green → yellow-green
+  • bark: dark brown → warm tan → pale gold
+  • leaves: deep forest green → emerald → bright green → yellow-green
+  • moss: dark teal-gray → muted green → sage → pale sage
+  • inner_wood: dark walnut brown → tan → pale gold
+  • eyes: rust → orange → amber → golden yellow
+  • roots: dark brown → warm tan → pale gold
+  • flowers: deep mauve → rose → pink → pale pink
 
 Each material region should show 2-4 distinct value steps from the ramp:
 darkest on lower-right edges (shadow), lightest on upper-left (highlight).

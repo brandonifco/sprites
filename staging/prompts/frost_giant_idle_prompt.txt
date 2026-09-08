@@ -6,8 +6,8 @@ Visual features: huge giant, massive frame
 Equipment: none — this creature does not carry weapons or tools.
 
 == POSE ==
-Frame: idle — Crouched or standing, antennae twitching, legs poised.
-Facing: Three-quarter front-right view. Segmented body visible, legs splayed, antennae forward.
+Frame: idle — Standing alert in a neutral ready stance, weight balanced.
+Facing: Three-quarter front-right view. Body angled slightly right. Weapon arm (right) visible; shield arm (left) partially occluded.
 Lighting: Primary light from upper-left. Highlights land on top-left surfaces; cast shadows fall to lower-right. Use darker ramp steps on lower-right edges of each material region.
 
 == PIXEL ART STYLE RULES ==
@@ -18,14 +18,23 @@ Lighting: Primary light from upper-left. Highlights land on top-left surfaces; c
 - 1-pixel dark outline around the entire sprite exterior
 - Sprite height should fill 154-184px of the 192px canvas
 - No opaque pixels touching the canvas edge (1px margin all around)
-- Use 24-40 unique colors total
+- IMPORTANT: Use AT LEAST 24 visually distinct colors (up to 40)
+  This means 24+ clearly different hues/values across the whole sprite.
+  Even a single-material creature needs shadows, midtones, highlights, and
+  secondary details (eyes, underside, scars, texture variation) in different colors.
 - Dithering allowed sparingly (max 15% of opaque pixels), rough materials only
 
 == COLOR PALETTE — USE ONLY THESE COLORS ==
 Outline: dark blue-gray to charcoal
 
 Material colors (use the described color ramp for each body part):
-  • body: cool plum-gray → dusty rose → pink → salmon
+  • skin: cool plum-gray → dusty rose → pink → salmon
+  • hair_beard: dark gray-purple → cool gray → silver → pale blue-white
+  • armor: dark steel gray → silver-white highlights
+  • clothing: dark navy → medium blue → sky blue → pale blue
+  • weapon: dark steel gray → silver-white highlights
+  • eyes: dark navy → blue → sky blue → pale blue → white glow
+  • boots: dark brown → warm tan → pale gold
 
 Each material region should show 2-4 distinct value steps from the ramp:
 darkest on lower-right edges (shadow), lightest on upper-left (highlight).

@@ -9,10 +9,15 @@
   "cr": "17",
   "outline_family": "OUTLINE-WARM",
   "material_assignments": {
-    "body": "LEATHER-RED",
-    "accent": "WARM-GOLD",
+    "scales": "LEATHER-RED",
+    "underbelly": "WARM-GOLD",
+    "wings_membrane": "LEATHER-RED",
+    "wings_bone": "BONE",
+    "horns": "BONE",
     "eyes": "WARM-GOLD",
-    "wings": "LEATHER-RED"
+    "claws": "NEUTRAL-COOL",
+    "teeth": "BONE",
+    "accent": "CLOTH-ORANGE"
   },
   "frames": [
     {

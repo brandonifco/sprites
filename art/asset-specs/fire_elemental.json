@@ -9,7 +9,11 @@
   "cr": "5",
   "outline_family": "OUTLINE-WARM",
   "material_assignments": {
-    "body": "FIRE"
+    "core": "FIRE",
+    "flames_outer": "WARM-GOLD",
+    "flames_inner": "LEATHER-RED",
+    "eyes": "CLOTH-YELLOW",
+    "embers": "CLOTH-ORANGE"
   },
   "frames": [
     {

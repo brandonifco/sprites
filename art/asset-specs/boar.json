@@ -9,7 +9,12 @@
   "cr": "1/4",
   "outline_family": "OUTLINE-WARM",
   "material_assignments": {
-    "body": "LEATHER-BROWN"
+    "body": "LEATHER-BROWN",
+    "snout": "SKIN-MEDIUM",
+    "tusks": "BONE",
+    "eyes": "WARM-GOLD",
+    "hooves": "LEATHER-BROWN",
+    "underbelly": "SKIN-MEDIUM"
   },
   "frames": [
     {

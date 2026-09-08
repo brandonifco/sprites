@@ -9,7 +9,13 @@
   "cr": "8",
   "outline_family": "OUTLINE-COOL",
   "material_assignments": {
-    "body": "SKIN-COOL"
+    "skin": "SKIN-COOL",
+    "hair_beard": "NEUTRAL-COOL",
+    "armor": "METAL-IRON",
+    "clothing": "CLOTH-BLUE",
+    "weapon": "METAL-IRON",
+    "eyes": "MAGIC-BLUE",
+    "boots": "LEATHER-BROWN"
   },
   "frames": [
     {

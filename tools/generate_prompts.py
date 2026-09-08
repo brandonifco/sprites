@@ -9,6 +9,7 @@ includes palette color descriptions, material guidance, and pose.
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -168,7 +169,7 @@ def classify_body_type(spec: dict) -> str:
 
     for btype, info in BODY_TYPES.items():
         for kw in info["keywords"]:
-            if kw in descriptors:
+            if re.search(r'\b' + re.escape(kw) + r'\b', descriptors):
                 return btype
 
     if "Ooze" in creature_type:
@@ -263,7 +264,10 @@ def build_prompt(spec: dict, cfg: dict, frame: str = "idle") -> str:
     lines.append(f"- Sprite height should fill {bbox['min']}-{bbox['max']}px of the {h}px canvas")
     lines.append("- No opaque pixels touching the canvas edge (1px margin all around)")
     colors = profile["unique_opaque_colors"]
-    lines.append(f"- Use {colors['min']}-{colors['max']} unique colors total")
+    lines.append(f"- IMPORTANT: Use AT LEAST {colors['min']} visually distinct colors (up to {colors['max']})")
+    lines.append(f"  This means {colors['min']}+ clearly different hues/values across the whole sprite.")
+    lines.append(f"  Even a single-material creature needs shadows, midtones, highlights, and")
+    lines.append(f"  secondary details (eyes, underside, scars, texture variation) in different colors.")
     if not profile.get("dithering", {}).get("allowed", True):
         lines.append("- NO dithering or checkerboard patterns")
     else:

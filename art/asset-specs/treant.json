@@ -9,7 +9,13 @@
   "cr": "9",
   "outline_family": "OUTLINE-WARM",
   "material_assignments": {
-    "body": "CLOTH-GREEN"
+    "bark": "LEATHER-BROWN",
+    "leaves": "CLOTH-GREEN",
+    "moss": "CLOTH-SAGE",
+    "inner_wood": "WOOD",
+    "eyes": "WARM-GOLD",
+    "roots": "LEATHER-BROWN",
+    "flowers": "CLOTH-ROSE"
   },
   "frames": [
     {

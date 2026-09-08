@@ -18,17 +18,25 @@ Lighting: Primary light from upper-left. Highlights land on top-left surfaces; c
 - 1-pixel dark outline around the entire sprite exterior
 - Sprite height should fill 154-184px of the 192px canvas
 - No opaque pixels touching the canvas edge (1px margin all around)
-- Use 24-40 unique colors total
+- IMPORTANT: Use AT LEAST 24 visually distinct colors (up to 40)
+  This means 24+ clearly different hues/values across the whole sprite.
+  Even a single-material creature needs shadows, midtones, highlights, and
+  secondary details (eyes, underside, scars, texture variation) in different colors.
 - Dithering allowed sparingly (max 15% of opaque pixels), rough materials only
 
 == COLOR PALETTE — USE ONLY THESE COLORS ==
 Outline: near-black warm purple-brown
 
 Material colors (use the described color ramp for each body part):
-  • body: deep maroon → crimson → bright orange-red
-  • accent: rust → orange → amber → golden yellow
+  • scales: deep maroon → crimson → bright orange-red
+  • underbelly: rust → orange → amber → golden yellow
+  • wings_membrane: deep maroon → crimson → bright orange-red
+  • wings_bone: dark brown → tan → pale cream → white
+  • horns: dark brown → tan → pale cream → white
   • eyes: rust → orange → amber → golden yellow
-  • wings: deep maroon → crimson → bright orange-red
+  • claws: dark gray-purple → cool gray → silver → pale blue-white
+  • teeth: dark brown → tan → pale cream → white
+  • accent: rust → burnt orange → warm peach
 
 Each material region should show 2-4 distinct value steps from the ramp:
 darkest on lower-right edges (shadow), lightest on upper-left (highlight).
