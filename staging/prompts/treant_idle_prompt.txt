@@ -3,10 +3,11 @@ Create a 192x192 pixel art sprite on a TRANSPARENT background.
 == SUBJECT ==
 Treant: Huge plant. plant body.
 Visual features: huge plant, plant body
+Equipment: none — this creature does not carry weapons or tools.
 
 == POSE ==
-Frame: idle — Standing alert in a neutral ready stance, weight balanced.
-Facing: Subject faces the viewer at a 3/4 angle, body angled slightly right. Weapon arm (right) is visible; shield arm (left) is partially occluded.
+Frame: idle — Standing rooted, branches slightly swaying, ancient and still.
+Facing: Three-quarter front-right view. Trunk or main body facing viewer, branches/limbs spread naturally.
 Lighting: Primary light from upper-left. Highlights land on top-left surfaces; cast shadows fall to lower-right. Use darker ramp steps on lower-right edges of each material region.
 
 == PIXEL ART STYLE RULES ==

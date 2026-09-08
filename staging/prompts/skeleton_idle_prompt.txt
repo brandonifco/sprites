@@ -3,10 +3,11 @@ Create a 64x64 pixel art sprite on a TRANSPARENT background.
 == SUBJECT ==
 Skeleton: Medium undead. undead, exposed bones.
 Visual features: medium undead, undead, exposed bones
+Equipment: none — this creature does not carry weapons or tools.
 
 == POSE ==
 Frame: idle — Standing alert in a neutral ready stance, weight balanced.
-Facing: Subject faces the viewer at a 3/4 angle, body angled slightly right. Weapon arm (right) is visible; shield arm (left) is partially occluded.
+Facing: Three-quarter front-right view. Body angled slightly right, arms at sides or in a natural resting position.
 Lighting: Primary light from upper-left. Highlights land on top-left surfaces; cast shadows fall to lower-right. Use darker ramp steps on lower-right edges of each material region.
 
 == PIXEL ART STYLE RULES ==

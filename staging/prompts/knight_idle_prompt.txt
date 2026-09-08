@@ -7,7 +7,7 @@ Equipment: crossbow, greatsword, longsword, plate armor
 
 == POSE ==
 Frame: idle — Standing alert in a neutral ready stance, weight balanced.
-Facing: Subject faces the viewer at a 3/4 angle, body angled slightly right. Weapon arm (right) is visible; shield arm (left) is partially occluded.
+Facing: Three-quarter front-right view. Body angled slightly right. Weapon arm (right) visible; shield arm (left) partially occluded.
 Lighting: Primary light from upper-left. Highlights land on top-left surfaces; cast shadows fall to lower-right. Use darker ramp steps on lower-right edges of each material region.
 
 == PIXEL ART STYLE RULES ==

@@ -54,6 +54,167 @@ RAMP_DESCRIPTIONS = {
 }
 
 
+BODY_TYPES = {
+    "quadruped": {
+        "keywords": ["quadruped", "hooves", "four legs"],
+        "creatures": ["Boar", "Wolf", "Dire Wolf", "Worg", "Lion", "Tiger",
+                       "Panther", "Bear", "Brown Bear", "Polar Bear", "Deer",
+                       "Elk", "Mastiff", "Hyena", "Jackal", "Weasel", "Cat",
+                       "Rat", "Mammoth", "Elephant", "Rhinoceros", "Camel",
+                       "Draft Horse", "Riding Horse", "Warhorse", "Mule",
+                       "Hippopotamus", "Saber-Toothed Tiger", "Hell Hound",
+                       "Blink Dog", "Giant Boar", "Giant Hyena", "Giant Rat",
+                       "Giant Weasel", "Giant Lizard"],
+        "facing": "Three-quarter front-right view. Body oriented diagonally, head turned slightly toward viewer. Front legs visible, hind legs partially behind.",
+        "idle_hint": "Standing alert on all fours, ears up, weight evenly distributed.",
+    },
+    "serpentine": {
+        "keywords": ["serpent", "snake", "worm", "eel"],
+        "creatures": ["Constrictor Snake", "Giant Constrictor Snake",
+                       "Flying Snake", "Giant Venomous Snake", "Purple Worm",
+                       "Behir", "Remorhaz"],
+        "facing": "Three-quarter front-right view. Body coiled or S-curved, head raised and facing viewer.",
+        "idle_hint": "Coiled with head raised, alert and watchful.",
+    },
+    "avian": {
+        "keywords": ["wings", "flying", "bird"],
+        "creatures": ["Eagle", "Giant Eagle", "Hawk", "Blood Hawk", "Raven",
+                       "Giant Vulture", "Owl", "Bat", "Roc", "Griffon",
+                       "Hippogriff", "Pseudodragon", "Pteranodon", "Wyvern",
+                       "Cockatrice", "Harpy", "Axe Beak"],
+        "facing": "Three-quarter front-right view. Wings partially spread or folded at sides. Talons/feet visible below.",
+        "idle_hint": "Perched or standing with wings folded, head alert.",
+    },
+    "dragon": {
+        "keywords": ["dragon"],
+        "creatures": [],
+        "facing": "Three-quarter front-right view. Wings partially spread, long neck curved toward viewer. Tail trailing behind. Forelimbs and hind legs visible.",
+        "idle_hint": "Rearing slightly with wings half-spread, head raised, imposing and alert.",
+    },
+    "amorphous": {
+        "keywords": ["amorphous", "ooze", "blob"],
+        "creatures": ["Gelatinous Cube", "Ochre Jelly", "Gray Ooze",
+                       "Black Pudding", "Shambling Mound"],
+        "facing": "Three-quarter front-right view. Shapeless mass with a vaguely defined front face.",
+        "idle_hint": "Quivering mass at rest, pseudopods retracted.",
+    },
+    "aquatic": {
+        "keywords": ["fish", "shark", "whale", "seahorse", "octopus"],
+        "creatures": ["Octopus", "Giant Octopus", "Giant Seahorse", "Seahorse",
+                       "Hunter Shark", "Giant Shark", "Reef Shark", "Killer Whale",
+                       "Piranha", "Giant Crocodile", "Crocodile", "Giant Frog",
+                       "Giant Toad", "Frog", "Aboleth", "Kraken", "Dragon Turtle",
+                       "Merfolk Skirmisher", "Merrow", "Sahuagin Warrior"],
+        "facing": "Three-quarter front-right view. Body angled as if swimming or hovering, fins/tentacles visible.",
+        "idle_hint": "Floating or hovering in a neutral swimming pose.",
+    },
+    "arachnid": {
+        "keywords": ["spider", "eight legs", "scorpion"],
+        "creatures": ["Spider", "Giant Spider", "Phase Spider", "Scorpion",
+                       "Giant Scorpion", "Ettercap", "Drider"],
+        "facing": "Three-quarter front-right view. Multiple legs splayed outward, body low to ground, front pair of legs raised slightly.",
+        "idle_hint": "Crouched low, legs splayed, pedipalps or pincers forward.",
+    },
+    "swarm": {
+        "keywords": ["swarm"],
+        "creatures": [],
+        "facing": "Three-quarter view. Clustered mass of tiny creatures forming a loose cloud or mound shape.",
+        "idle_hint": "Swirling cluster of tiny creatures, loosely cohesive.",
+    },
+    "plant": {
+        "keywords": ["plant body", "tree"],
+        "creatures": ["Treant", "Awakened Tree", "Awakened Shrub",
+                       "Shambling Mound", "Violet Fungus"],
+        "facing": "Three-quarter front-right view. Trunk or main body facing viewer, branches/limbs spread naturally.",
+        "idle_hint": "Standing rooted, branches slightly swaying, ancient and still.",
+    },
+    "insectoid": {
+        "keywords": ["insect", "beetle", "wasp", "centipede", "ant"],
+        "creatures": ["Giant Centipede", "Giant Fire Beetle", "Giant Wasp",
+                       "Stirge", "Ankheg", "Rust Monster"],
+        "facing": "Three-quarter front-right view. Segmented body visible, legs splayed, antennae forward.",
+        "idle_hint": "Crouched or standing, antennae twitching, legs poised.",
+    },
+}
+
+ARMED_HUMANOID_FACING = (
+    "Three-quarter front-right view. Body angled slightly right. "
+    "Weapon arm (right) visible; shield arm (left) partially occluded."
+)
+UNARMED_HUMANOID_FACING = (
+    "Three-quarter front-right view. Body angled slightly right, "
+    "arms at sides or in a natural resting position."
+)
+ELEMENTAL_FACING = (
+    "Three-quarter front-right view. Swirling elemental form "
+    "with a vaguely humanoid shape, no distinct limbs needed."
+)
+
+
+def classify_body_type(spec: dict) -> str:
+    name = spec.get("entity_name", "")
+    descriptors = " ".join(spec.get("visual_descriptors", [])).lower()
+    creature_type = spec.get("creature_type", "")
+
+    if "swarm" in name.lower():
+        return "swarm"
+
+    for btype, info in BODY_TYPES.items():
+        if name in info["creatures"]:
+            return btype
+
+    if "dragon" in name.lower() and "Dragon" in creature_type:
+        return "dragon"
+
+    for btype, info in BODY_TYPES.items():
+        for kw in info["keywords"]:
+            if kw in descriptors:
+                return btype
+
+    if "Ooze" in creature_type:
+        return "amorphous"
+    if "Plant" in creature_type:
+        return "plant"
+    if "Elemental" in creature_type:
+        return "elemental"
+
+    return "humanoid"
+
+
+def get_facing_description(spec: dict) -> str:
+    body_type = classify_body_type(spec)
+
+    if body_type in BODY_TYPES:
+        return BODY_TYPES[body_type]["facing"]
+
+    if body_type == "elemental":
+        return ELEMENTAL_FACING
+
+    has_weapon = "weapon" in spec.get("material_assignments", {})
+    has_shield = "shield" in spec.get("material_assignments", {})
+    equipment = spec.get("typical_equipment") or []
+
+    if has_weapon or has_shield or any(
+        e in equipment for e in [
+            "longsword", "greatsword", "scimitar", "mace", "dagger",
+            "spear", "greataxe", "shield", "staff", "wand",
+            "longbow", "shortbow", "crossbow",
+        ]
+    ):
+        return ARMED_HUMANOID_FACING
+
+    return UNARMED_HUMANOID_FACING
+
+
+def get_idle_hint(spec: dict) -> str | None:
+    body_type = classify_body_type(spec)
+    if body_type in BODY_TYPES:
+        return BODY_TYPES[body_type]["idle_hint"]
+    if body_type == "elemental":
+        return "Hovering or swirling in place, elemental energy contained."
+    return None
+
+
 def build_prompt(spec: dict, cfg: dict, frame: str = "idle") -> str:
     profile = cfg["profiles"][spec["canvas_profile"]]
     w, h = profile["width"], profile["height"]
@@ -76,12 +237,19 @@ def build_prompt(spec: dict, cfg: dict, frame: str = "idle") -> str:
         lines.append(f"Visual features: {', '.join(spec['visual_descriptors'])}")
     if spec.get("typical_equipment"):
         lines.append(f"Equipment: {', '.join(spec['typical_equipment'])}")
+    else:
+        lines.append("Equipment: none — this creature does not carry weapons or tools.")
     lines.append("")
 
     lines.append("== POSE ==")
     if frame_info and frame_info.get("pose_hint"):
-        lines.append(f"Frame: {frame} — {frame_info['pose_hint']}")
-    lines.append(f"Facing: {conventions.get('facing_description', 'Three-quarter front-right view.')}")
+        idle_override = get_idle_hint(spec) if frame == "idle" else None
+        if idle_override:
+            lines.append(f"Frame: {frame} — {idle_override}")
+        else:
+            lines.append(f"Frame: {frame} — {frame_info['pose_hint']}")
+    facing = get_facing_description(spec)
+    lines.append(f"Facing: {facing}")
     lines.append(f"Lighting: {conventions.get('light_description', 'Upper-left light source.')}")
     lines.append("")
 
