@@ -1,0 +1,35 @@
+Create a 64x64 pixel art sprite on a TRANSPARENT background.
+
+== SUBJECT ==
+Skeleton: Medium undead. undead, exposed bones.
+Visual features: medium undead, undead, exposed bones
+
+== POSE ==
+Frame: idle — Standing alert in a neutral ready stance, weight balanced.
+Facing: Subject faces the viewer at a 3/4 angle, body angled slightly right. Weapon arm (right) is visible; shield arm (left) is partially occluded.
+Lighting: Primary light from upper-left. Highlights land on top-left surfaces; cast shadows fall to lower-right. Use darker ramp steps on lower-right edges of each material region.
+
+== PIXEL ART STYLE RULES ==
+- Exactly 64x64 pixels, transparent background (PNG with alpha)
+- Classic pixel art: NO anti-aliasing, NO sub-pixel rendering, NO gradients
+- Every opaque pixel must be a single flat color from the palette below
+- Binary alpha only: each pixel is fully opaque (255) or fully transparent (0)
+- 1-pixel dark outline around the entire sprite exterior
+- Sprite height should fill 48-60px of the 64px canvas
+- No opaque pixels touching the canvas edge (1px margin all around)
+- Use 12-22 unique colors total
+- NO dithering or checkerboard patterns
+
+== COLOR PALETTE — USE ONLY THESE COLORS ==
+Outline: dark blue-gray to charcoal
+
+Material colors (use the described color ramp for each body part):
+  • body: dark brown → tan → pale cream → white
+
+Each material region should show 2-4 distinct value steps from the ramp:
+darkest on lower-right edges (shadow), lightest on upper-left (highlight).
+
+== IMPORTANT ==
+This must look like a retro game sprite — chunky, readable pixels with
+clear silhouette. Think SNES/GBA era pixel art. No smooth gradients,
+no blurring, no soft edges. Every pixel is intentional.
