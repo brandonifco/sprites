@@ -1,0 +1,45 @@
+{
+  "spec_version": 1,
+  "entity_name": "Adult Gold Dragon",
+  "entity_slug": "adult_gold_dragon",
+  "entity_type": "monster",
+  "canvas_profile": "192x192",
+  "dnd_size": "Huge",
+  "creature_type": "Dragon (Metallic)",
+  "cr": "17",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "WARM-GOLD",
+    "eyes": "WARM-GOLD",
+    "wings": "WARM-GOLD"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "adult_gold_dragon_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "adult_gold_dragon_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "adult_gold_dragon_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "huge dragon (metallic)",
+    "gold scales",
+    "wings",
+    "claws",
+    "tail"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Huge dragon. gold scales, wings, claws, tail. Dominant gold coloration throughout scales and wings. Full size with prominent horns and wingspan."
+}

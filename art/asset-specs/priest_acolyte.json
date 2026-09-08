@@ -1,0 +1,46 @@
+{
+  "spec_version": 1,
+  "entity_name": "Priest Acolyte",
+  "entity_slug": "priest_acolyte",
+  "entity_type": "monster",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Humanoid (Cleric)",
+  "cr": "1/4",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "SKIN-MEDIUM",
+    "armor": "METAL-IRON",
+    "weapon": "METAL-IRON",
+    "accent": "CLOTH-RED"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "priest_acolyte_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "priest_acolyte_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "priest_acolyte_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "medium humanoid (cleric)",
+    "humanoid"
+  ],
+  "typical_equipment": [
+    "chain mail",
+    "mace"
+  ],
+  "generation_notes": "Medium humanoid. humanoid."
+}

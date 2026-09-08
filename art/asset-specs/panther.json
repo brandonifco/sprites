@@ -1,0 +1,42 @@
+{
+  "spec_version": 1,
+  "entity_name": "Panther",
+  "entity_slug": "panther",
+  "entity_type": "monster",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Beast",
+  "cr": "1/4",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "LEATHER-BROWN",
+    "armor": "LEATHER-BROWN"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "panther_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "panther_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "panther_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "medium beast"
+  ],
+  "typical_equipment": [
+    "hide armor"
+  ],
+  "generation_notes": "Medium beast."
+}

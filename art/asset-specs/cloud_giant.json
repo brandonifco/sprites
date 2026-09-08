@@ -1,0 +1,40 @@
+{
+  "spec_version": 1,
+  "entity_name": "Cloud Giant",
+  "entity_slug": "cloud_giant",
+  "entity_type": "monster",
+  "canvas_profile": "192x192",
+  "dnd_size": "Huge",
+  "creature_type": "Giant",
+  "cr": "9",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "SKIN-LIGHT"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "cloud_giant_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "cloud_giant_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "cloud_giant_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "huge giant",
+    "massive frame"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Huge giant. massive frame."
+}

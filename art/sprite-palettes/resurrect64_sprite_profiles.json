@@ -592,6 +592,29 @@
       "R64-18"
     ]
   },
+  "rendering_conventions": {
+    "facing_direction": "three_quarter_front_right",
+    "facing_description": "Subject faces the viewer at a 3/4 angle, body angled slightly right. Weapon arm (right) is visible; shield arm (left) is partially occluded.",
+    "light_source": "upper_left",
+    "light_description": "Primary light from upper-left. Highlights land on top-left surfaces; cast shadows fall to lower-right. Use darker ramp steps on lower-right edges of each material region.",
+    "ground_plane": "flat_bottom",
+    "ground_description": "Sprite stands on an implied flat surface at the bottom of the bounding box. No drawn ground — just visual weight at the base."
+  },
+  "outline_family_defaults": {
+    "default": "OUTLINE-WARM",
+    "overrides": {
+      "cold_aquatic_undead": {
+        "family": "OUTLINE-COOL",
+        "creature_types": ["Undead"],
+        "keywords": ["frost", "ice", "cold", "aquatic", "water", "sea", "ocean"]
+      },
+      "fey_aberration": {
+        "family": "OUTLINE-VIOLET",
+        "creature_types": ["Fey", "Aberration"],
+        "keywords": []
+      }
+    }
+  },
   "creature_size_mapping": {
     "Tiny": "64x64",
     "Small": "64x64",

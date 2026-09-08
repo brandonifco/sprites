@@ -1,0 +1,44 @@
+{
+  "spec_version": 1,
+  "entity_name": "Commoner",
+  "entity_slug": "commoner",
+  "entity_type": "monster",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Humanoid",
+  "cr": "0",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "SKIN-MEDIUM",
+    "weapon": "METAL-IRON",
+    "accent": "CLOTH-RED"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "commoner_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "commoner_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "commoner_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "medium humanoid",
+    "humanoid"
+  ],
+  "typical_equipment": [
+    "mace"
+  ],
+  "generation_notes": "Medium humanoid. humanoid."
+}

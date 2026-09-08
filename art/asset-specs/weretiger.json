@@ -1,0 +1,45 @@
+{
+  "spec_version": 1,
+  "entity_name": "Weretiger",
+  "entity_slug": "weretiger",
+  "entity_type": "monster",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Monstrosity (Lycanthrope)",
+  "cr": "4",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "SKIN-MEDIUM",
+    "armor": "LEATHER-BROWN",
+    "weapon": "WOOD"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "weretiger_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "weretiger_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "weretiger_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "medium monstrosity (lycanthrope)",
+    "fangs/bite"
+  ],
+  "typical_equipment": [
+    "hide armor",
+    "longbow"
+  ],
+  "generation_notes": "Medium monstrosity. fangs/bite."
+}

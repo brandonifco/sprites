@@ -1,0 +1,55 @@
+{
+  "spec_version": 1,
+  "entity_name": "Wizard",
+  "entity_slug": "wizard_human_a",
+  "entity_type": "player",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Humanoid",
+  "cr": null,
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "SKIN-LIGHT",
+    "clothing": "CLOTH-BLUE",
+    "weapon": "WOOD",
+    "accent": "MAGIC-BLUE"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "wizard_human_a_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weapon at side."
+    },
+    {
+      "frame": "attack",
+      "filename": "wizard_human_a_attack.png",
+      "pose_hint": "Mid-swing or thrust with primary weapon."
+    },
+    {
+      "frame": "hit",
+      "filename": "wizard_human_a_hit.png",
+      "pose_hint": "Recoiling from a blow, body flinching backward."
+    },
+    {
+      "frame": "death",
+      "filename": "wizard_human_a_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    },
+    {
+      "frame": "cast",
+      "filename": "wizard_human_a_cast.png",
+      "pose_hint": "Channeling magic, free hand raised with energy gathering."
+    }
+  ],
+  "visual_descriptors": [
+    "medium humanoid",
+    "human"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Wizard (Human, variant a). Medium humanoid in class-appropriate gear.",
+  "player_species": "Human",
+  "player_variant": "a"
+}

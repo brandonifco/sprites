@@ -1,0 +1,45 @@
+{
+  "spec_version": 1,
+  "entity_name": "Ancient Bronze Dragon",
+  "entity_slug": "ancient_bronze_dragon",
+  "entity_type": "monster",
+  "canvas_profile": "192x192",
+  "dnd_size": "Gargantuan",
+  "creature_type": "Dragon (Metallic)",
+  "cr": "22",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "WARM-GOLD",
+    "eyes": "WARM-GOLD",
+    "wings": "WARM-GOLD"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "ancient_bronze_dragon_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "ancient_bronze_dragon_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "ancient_bronze_dragon_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "gargantuan dragon (metallic)",
+    "bronze scales",
+    "wings",
+    "claws",
+    "tail"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Gargantuan dragon. bronze scales, wings, claws, tail. Dominant bronze coloration throughout scales and wings. Massive, weathered, ancient and imposing."
+}

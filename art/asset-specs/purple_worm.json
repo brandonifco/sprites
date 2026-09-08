@@ -1,0 +1,41 @@
+{
+  "spec_version": 1,
+  "entity_name": "Purple Worm",
+  "entity_slug": "purple_worm",
+  "entity_type": "monster",
+  "canvas_profile": "192x192",
+  "dnd_size": "Gargantuan",
+  "creature_type": "Monstrosity",
+  "cr": "15",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "SKIN-MEDIUM"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "purple_worm_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "purple_worm_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "purple_worm_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "gargantuan monstrosity",
+    "fangs/bite",
+    "tail"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Gargantuan monstrosity. fangs/bite, tail."
+}

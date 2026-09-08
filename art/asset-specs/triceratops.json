@@ -1,0 +1,39 @@
+{
+  "spec_version": 1,
+  "entity_name": "Triceratops",
+  "entity_slug": "triceratops",
+  "entity_type": "monster",
+  "canvas_profile": "192x192",
+  "dnd_size": "Huge",
+  "creature_type": "Beast (Dinosaur)",
+  "cr": "5",
+  "outline_family": "OUTLINE-COOL",
+  "material_assignments": {
+    "body": "LEATHER-BROWN"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "triceratops_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "triceratops_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "triceratops_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "huge beast (dinosaur)"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Huge beast."
+}

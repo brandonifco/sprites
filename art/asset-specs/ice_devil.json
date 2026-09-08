@@ -1,0 +1,43 @@
+{
+  "spec_version": 1,
+  "entity_name": "Ice Devil",
+  "entity_slug": "ice_devil",
+  "entity_type": "monster",
+  "canvas_profile": "128x128",
+  "dnd_size": "Large",
+  "creature_type": "Fiend (Devil)",
+  "cr": "14",
+  "outline_family": "OUTLINE-COOL",
+  "material_assignments": {
+    "body": "LEATHER-RED",
+    "accent": "FIRE",
+    "eyes": "FIRE"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "ice_devil_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "ice_devil_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "ice_devil_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "large fiend (devil)",
+    "fiendish",
+    "tail"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Large fiend. fiendish, tail."
+}

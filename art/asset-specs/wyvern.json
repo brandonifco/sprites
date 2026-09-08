@@ -1,0 +1,41 @@
+{
+  "spec_version": 1,
+  "entity_name": "Wyvern",
+  "entity_slug": "wyvern",
+  "entity_type": "monster",
+  "canvas_profile": "128x128",
+  "dnd_size": "Large",
+  "creature_type": "Dragon",
+  "cr": "6",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "CLOTH-GREEN",
+    "accent": "WARM-GOLD",
+    "eyes": "WARM-GOLD"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "wyvern_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "wyvern_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "wyvern_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "large dragon"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Large dragon."
+}

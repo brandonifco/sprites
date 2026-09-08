@@ -1,0 +1,46 @@
+{
+  "spec_version": 1,
+  "entity_name": "Young White Dragon",
+  "entity_slug": "young_white_dragon",
+  "entity_type": "monster",
+  "canvas_profile": "128x128",
+  "dnd_size": "Large",
+  "creature_type": "Dragon (Chromatic)",
+  "cr": "6",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "NEUTRAL-COOL",
+    "accent": "WARM-GOLD",
+    "eyes": "WARM-GOLD",
+    "wings": "NEUTRAL-COOL"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "young_white_dragon_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "young_white_dragon_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "young_white_dragon_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "large dragon (chromatic)",
+    "white scales",
+    "wings",
+    "claws",
+    "tail"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Large dragon. white scales, wings, claws, tail. Dominant white coloration throughout scales and wings. Moderate size, developing features."
+}

@@ -1,0 +1,48 @@
+{
+  "spec_version": 1,
+  "entity_name": "Tarrasque",
+  "entity_slug": "tarrasque",
+  "entity_type": "monster",
+  "canvas_profile": "192x192",
+  "dnd_size": "Gargantuan",
+  "creature_type": "Monstrosity (Titan)",
+  "cr": "30",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "SKIN-MEDIUM",
+    "weapon": "WOOD",
+    "armor": "LEATHER-BROWN"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "tarrasque_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "tarrasque_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "tarrasque_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "gargantuan monstrosity (titan)",
+    "fangs/bite",
+    "claws",
+    "tail"
+  ],
+  "typical_equipment": [
+    "crossbow",
+    "leather armor",
+    "mace"
+  ],
+  "generation_notes": "Gargantuan monstrosity. fangs/bite, claws, tail."
+}

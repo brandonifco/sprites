@@ -1,0 +1,41 @@
+{
+  "spec_version": 1,
+  "entity_name": "Mummy",
+  "entity_slug": "mummy",
+  "entity_type": "monster",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Undead",
+  "cr": "3",
+  "outline_family": "OUTLINE-COOL",
+  "material_assignments": {
+    "body": "BONE",
+    "eyes": "FIRE"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "mummy_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "mummy_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "mummy_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "medium undead",
+    "undead"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Medium undead. undead."
+}

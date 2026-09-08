@@ -1,0 +1,45 @@
+{
+  "spec_version": 1,
+  "entity_name": "Young Bronze Dragon",
+  "entity_slug": "young_bronze_dragon",
+  "entity_type": "monster",
+  "canvas_profile": "128x128",
+  "dnd_size": "Large",
+  "creature_type": "Dragon (Metallic)",
+  "cr": "8",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "WARM-GOLD",
+    "eyes": "WARM-GOLD",
+    "wings": "WARM-GOLD"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "young_bronze_dragon_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "young_bronze_dragon_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "young_bronze_dragon_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "large dragon (metallic)",
+    "bronze scales",
+    "wings",
+    "claws",
+    "tail"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Large dragon. bronze scales, wings, claws, tail. Dominant bronze coloration throughout scales and wings. Moderate size, developing features."
+}

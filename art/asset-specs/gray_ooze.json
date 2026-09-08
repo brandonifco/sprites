@@ -1,0 +1,37 @@
+{
+  "spec_version": 1,
+  "entity_name": "Gray Ooze",
+  "entity_slug": "gray_ooze",
+  "entity_type": "monster",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Ooze",
+  "cr": "1/2",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "NEUTRAL-COOL"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "gray_ooze_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "gray_ooze_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "gray_ooze_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated."
+    }
+  ],
+  "visual_descriptors": [
+    "medium ooze",
+    "amorphous"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Medium ooze. amorphous. Amorphous, bloblike form with no distinct limbs."
+}

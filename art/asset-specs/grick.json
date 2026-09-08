@@ -1,0 +1,40 @@
+{
+  "spec_version": 1,
+  "entity_name": "Grick",
+  "entity_slug": "grick",
+  "entity_type": "monster",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Aberration",
+  "cr": "2",
+  "outline_family": "OUTLINE-VIOLET",
+  "material_assignments": {
+    "body": "SKIN-COOL",
+    "eyes": "MAGIC-VIOLET"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "grick_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "grick_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "grick_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "medium aberration"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Medium aberration."
+}

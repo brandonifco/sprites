@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "asset_spec_v1",
+  "title": "SRD_Combat Sprite Asset Specification",
+  "description": "Fully-prescribed generation spec for one entity's sprite set. References the entity index for base data; all ramp assignments are explicit.",
+  "type": "object",
+  "required": [
+    "spec_version",
+    "entity_name",
+    "entity_slug",
+    "entity_type",
+    "canvas_profile",
+    "outline_family",
+    "material_assignments",
+    "frames"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "spec_version": {
+      "const": 1,
+      "description": "Schema version for forward compatibility."
+    },
+    "entity_name": {
+      "type": "string",
+      "description": "Canonical name matching srd_entity_index.json (e.g. 'Goblin Warrior', 'Fighter')."
+    },
+    "entity_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$",
+      "description": "Filename slug. For monsters: full name lowercased with underscores. For players: {class}_{species}_{variant}."
+    },
+    "entity_type": {
+      "enum": ["monster", "player"],
+      "description": "Whether this is a monster or player character template."
+    },
+    "canvas_profile": {
+      "enum": ["64x64", "128x128", "192x192"],
+      "description": "Size tier from creature_size_mapping."
+    },
+    "dnd_size": {
+      "type": "string",
+      "description": "D&D size category (Tiny, Small, Medium, Large, Huge, Gargantuan)."
+    },
+    "creature_type": {
+      "type": "string",
+      "description": "D&D creature type from the entity index (e.g. 'Undead', 'Dragon (Chromatic)')."
+    },
+    "cr": {
+      "type": ["string", "null"],
+      "description": "Challenge rating from the entity index."
+    },
+    "outline_family": {
+      "type": "string",
+      "description": "Ramp family for the 1px exterior contour. One of: OUTLINE-WARM, OUTLINE-COOL, OUTLINE-VIOLET."
+    },
+    "material_assignments": {
+      "type": "object",
+      "description": "Map of semantic material name to ramp family. Every visible material region must have an entry. Keys are lowercase identifiers (body, armor, weapon, clothing, accent, eyes, wings, etc.).",
+      "additionalProperties": {
+        "type": "string",
+        "description": "Ramp family name from the approved list in the sprite profiles."
+      },
+      "minProperties": 1
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["frame", "filename"],
+        "additionalProperties": false,
+        "properties": {
+          "frame": {
+            "enum": ["idle", "attack", "hit", "death", "cast"],
+            "description": "Frame type."
+          },
+          "filename": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+\\.(png)$",
+            "description": "Output filename ({entity_slug}_{frame}.png)."
+          },
+          "pose_hint": {
+            "type": "string",
+            "description": "Brief pose/action description for the AI generator."
+          },
+          "material_overrides": {
+            "type": "object",
+            "description": "Per-frame overrides to material_assignments (e.g. death frame might add BLOOD).",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "minItems": 3
+    },
+    "visual_descriptors": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Visual keywords from the entity index, passed through to AI prompt."
+    },
+    "typical_equipment": {
+      "type": ["array", "null"],
+      "items": { "type": "string" },
+      "description": "Equipment list from entity index."
+    },
+    "generation_notes": {
+      "type": "string",
+      "description": "Free-text notes for the AI generator about this specific entity."
+    },
+    "player_species": {
+      "type": "string",
+      "description": "For player specs only: which species variant this spec is for."
+    },
+    "player_variant": {
+      "type": "string",
+      "description": "For player specs only: visual variant tag (e.g. 'a', 'b', 'f', 'm')."
+    }
+  }
+}

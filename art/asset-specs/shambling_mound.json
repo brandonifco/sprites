@@ -1,0 +1,40 @@
+{
+  "spec_version": 1,
+  "entity_name": "Shambling Mound",
+  "entity_slug": "shambling_mound",
+  "entity_type": "monster",
+  "canvas_profile": "128x128",
+  "dnd_size": "Large",
+  "creature_type": "Plant",
+  "cr": "5",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "CLOTH-GREEN",
+    "shield": "METAL-IRON"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "shambling_mound_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "shambling_mound_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "shambling_mound_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated."
+    }
+  ],
+  "visual_descriptors": [
+    "large plant",
+    "plant body"
+  ],
+  "typical_equipment": [
+    "shield"
+  ],
+  "generation_notes": "Large plant. plant body."
+}

@@ -1,0 +1,40 @@
+{
+  "spec_version": 1,
+  "entity_name": "Tyrannosaurus Rex",
+  "entity_slug": "tyrannosaurus_rex",
+  "entity_type": "monster",
+  "canvas_profile": "192x192",
+  "dnd_size": "Huge",
+  "creature_type": "Beast (Dinosaur)",
+  "cr": "8",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "LEATHER-BROWN"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "tyrannosaurus_rex_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "tyrannosaurus_rex_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "tyrannosaurus_rex_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "huge beast (dinosaur)",
+    "fangs/bite"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Huge beast. fangs/bite."
+}

@@ -1,0 +1,40 @@
+{
+  "spec_version": 1,
+  "entity_name": "Mule",
+  "entity_slug": "mule",
+  "entity_type": "monster",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Beast",
+  "cr": "1/8",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "LEATHER-BROWN"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "mule_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "mule_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "mule_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "medium beast",
+    "fangs/bite"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Medium beast. fangs/bite."
+}

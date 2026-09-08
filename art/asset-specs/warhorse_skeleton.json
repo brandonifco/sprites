@@ -1,0 +1,43 @@
+{
+  "spec_version": 1,
+  "entity_name": "Warhorse Skeleton",
+  "entity_slug": "warhorse_skeleton",
+  "entity_type": "monster",
+  "canvas_profile": "128x128",
+  "dnd_size": "Large",
+  "creature_type": "Undead",
+  "cr": "1/2",
+  "outline_family": "OUTLINE-COOL",
+  "material_assignments": {
+    "body": "BONE"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "warhorse_skeleton_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "warhorse_skeleton_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "warhorse_skeleton_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "large undead",
+    "undead",
+    "exposed bones",
+    "quadruped",
+    "hooves"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Large undead. undead, exposed bones, quadruped, hooves."
+}

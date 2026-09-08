@@ -1,0 +1,45 @@
+{
+  "spec_version": 1,
+  "entity_name": "Half-Dragon",
+  "entity_slug": "half_dragon",
+  "entity_type": "monster",
+  "canvas_profile": "64x64",
+  "dnd_size": "Medium",
+  "creature_type": "Dragon",
+  "cr": "5",
+  "outline_family": "OUTLINE-WARM",
+  "material_assignments": {
+    "body": "CLOTH-GREEN",
+    "accent": "WARM-GOLD",
+    "eyes": "WARM-GOLD",
+    "wings": "CLOTH-GREEN"
+  },
+  "frames": [
+    {
+      "frame": "idle",
+      "filename": "half_dragon_idle.png",
+      "pose_hint": "Standing alert in a neutral ready stance, weight balanced."
+    },
+    {
+      "frame": "attack",
+      "filename": "half_dragon_attack.png",
+      "pose_hint": "Mid-strike with primary attack, body lunging forward."
+    },
+    {
+      "frame": "death",
+      "filename": "half_dragon_death.png",
+      "pose_hint": "Collapsing or fallen, body limp and defeated.",
+      "material_overrides": {
+        "blood": "BLOOD"
+      }
+    }
+  ],
+  "visual_descriptors": [
+    "medium dragon",
+    "wings",
+    "claws",
+    "tail"
+  ],
+  "typical_equipment": null,
+  "generation_notes": "Medium dragon. wings, claws, tail."
+}
