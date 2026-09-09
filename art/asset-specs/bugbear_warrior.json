@@ -35,11 +35,12 @@
   "visual_descriptors": [
     "medium fey (goblinoid)",
     "goblinoid",
-    "quadruped",
+    "bipedal",
+    "hulking hairy humanoid",
     "fur"
   ],
   "typical_equipment": [
     "hide armor"
   ],
-  "generation_notes": "Medium fey. goblinoid, quadruped, fur."
+  "generation_notes": "Large hulking hairy goblinoid humanoid. Bipedal, stands upright on two legs. Broad shoulders, long arms, covered in coarse fur. Brutish face with pointed ears."
 }
