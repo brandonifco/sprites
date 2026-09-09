@@ -56,6 +56,77 @@ def generate_image(
     return False, f"codex exited {result.returncode}, no image produced. {stderr or stdout}"
 
 
+def generate_images_batch(
+    items: list[tuple[str, Path]],
+    timeout: int = 300,
+) -> list[tuple[bool, str]]:
+    """Generate multiple sprites in a single Codex session.
+
+    items: list of (prompt, output_path) pairs.
+    Returns list of (ok, message) in same order.
+    """
+    if not items:
+        return []
+    if len(items) == 1:
+        return [generate_image(items[0][0], items[0][1], timeout)]
+
+    for _, path in items:
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+    parts = []
+    for i, (prompt, output_path) in enumerate(items, 1):
+        parts.append(
+            f"=== SPRITE {i} of {len(items)} ===\n"
+            f"Save as: {output_path}\n\n"
+            f"{prompt}"
+        )
+
+    codex_prompt = (
+        f"Generate {len(items)} sprite images, one at a time. "
+        f"For each one, generate the image and save it to the specified path. "
+        f"Do NOT resize any image — save each at whatever resolution is generated.\n\n"
+        + "\n\n".join(parts)
+    )
+
+    working_dir = items[0][1].parent.resolve()
+
+    try:
+        result = subprocess.run(
+            [
+                "npx", "@openai/codex", "exec",
+                "-s", "workspace-write",
+                "--skip-git-repo-check",
+                "--ephemeral",
+                "-C", str(working_dir),
+                codex_prompt,
+            ],
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+            input="",
+        )
+    except subprocess.TimeoutExpired:
+        results = []
+        for _, path in items:
+            if path.exists() and path.stat().st_size > 0:
+                results.append((True, "generated"))
+            else:
+                results.append((False, f"codex timed out after {timeout}s"))
+        return results
+    except FileNotFoundError:
+        return [(False, "npx or @openai/codex not found")] * len(items)
+
+    results = []
+    for _, path in items:
+        if path.exists() and path.stat().st_size > 0:
+            results.append((True, "generated"))
+        else:
+            stderr = result.stderr[-500:] if result.stderr else ""
+            stdout = result.stdout[-500:] if result.stdout else ""
+            results.append((False, f"codex exited {result.returncode}, no image produced. {stderr or stdout}"))
+    return results
+
+
 def main() -> int:
     import argparse
 

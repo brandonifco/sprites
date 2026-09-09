@@ -12,11 +12,15 @@ Automates the full workflow:
 Codex uses whatever model is in ~/.codex/config.toml (Luna medium by default).
 No API key needed — authenticates via ChatGPT session.
 
+Supports batch mode: generates 2 sprites per Codex session to halve rate
+limit consumption. Retries fall back to single generation.
+
 Usage:
   python3 tools/sprite_pipeline.py goblin_warrior skeleton troll
   python3 tools/sprite_pipeline.py --all --skip-existing
   python3 tools/sprite_pipeline.py --all-frames adult_red_dragon
   python3 tools/sprite_pipeline.py --dry-run goblin_warrior
+  python3 tools/sprite_pipeline.py --no-batch goblin_warrior skeleton
 """
 from __future__ import annotations
 
@@ -33,6 +37,8 @@ SPECS_DIR = Path("art/asset-specs")
 STAGING_RAW = Path("staging/raw")
 STAGING_NORM = Path("staging/normalized")
 ASSETS_DIR = Path("assets/sprites")
+
+BATCH_SIZE = 2
 
 
 @dataclass
@@ -82,6 +88,12 @@ def codex_generate(prompt: str, output: Path) -> tuple[bool, str]:
     return generate_image(prompt, output)
 
 
+def codex_generate_batch(items: list[tuple[str, Path]]) -> list[tuple[bool, str]]:
+    sys.path.insert(0, str(Path("tools").resolve()))
+    from codex_generate import generate_images_batch
+    return generate_images_batch(items, timeout=300)
+
+
 def normalize(raw: Path, out: Path, profile: str) -> tuple[bool, list[str]]:
     out.parent.mkdir(parents=True, exist_ok=True)
     r = subprocess.run(
@@ -104,8 +116,29 @@ def validate(sprite: Path, profile: str) -> tuple[bool, list[str]]:
     return r.returncode == 0, msgs
 
 
-def process(slug: str, frame: str, max_attempts: int = 3,
-            skip_existing: bool = True, dry_run: bool = False) -> Result:
+def normalize_and_validate(slug, frame, profile, raw, norm):
+    """Normalize a raw image and validate it. Returns (passed, Result_or_None)."""
+    ok, msgs = normalize(raw, norm, profile)
+    for m in msgs:
+        print(f"    {m}")
+    if not ok:
+        return False, None
+
+    ok, msgs = validate(norm, profile)
+    for m in msgs:
+        print(f"    {m}")
+    if ok:
+        final = ASSETS_DIR / profile / f"{slug}_{frame}.png"
+        final.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(norm, final)
+        print(f"    Deployed: {final}")
+        return True, Result(slug, frame, profile, "pass", str(final), 1)
+    return False, None
+
+
+def process_single(slug: str, frame: str, max_attempts: int = 3,
+                   skip_existing: bool = True, dry_run: bool = False) -> Result:
+    """Process a single entity with single-sprite Codex calls (used for retries)."""
     spec = load_spec(slug)
     if not spec:
         return Result(slug, frame, "", "fail", f"no spec: {SPECS_DIR / f'{slug}.json'}")
@@ -140,22 +173,86 @@ def process(slug: str, frame: str, max_attempts: int = 3,
             continue
         print(f"    Image saved")
 
-        ok, msgs = normalize(raw, norm, profile)
-        for m in msgs:
-            print(f"    {m}")
-        if not ok:
-            continue
-
-        ok, msgs = validate(norm, profile)
-        for m in msgs:
-            print(f"    {m}")
-        if ok:
-            final.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(norm, final)
-            print(f"    Deployed: {final}")
-            return Result(slug, frame, profile, "pass", str(final), attempt)
+        passed, result = normalize_and_validate(slug, frame, profile, raw, norm)
+        if passed:
+            return result
 
     return Result(slug, frame, profile, "fail", "exhausted attempts", max_attempts)
+
+
+def process_batch(jobs: list[tuple[str, str, dict]], skip_existing: bool = True,
+                  max_attempts: int = 3, dry_run: bool = False) -> list[Result]:
+    """Process a batch of (slug, frame, spec) with batched Codex calls.
+
+    First attempt uses batch generation (2 per Codex session).
+    Failed sprites retry individually.
+    """
+    results = []
+    pending = []
+
+    for slug, frame, spec in jobs:
+        profile = spec["canvas_profile"]
+        filename = f"{slug}_{frame}.png"
+        final = ASSETS_DIR / profile / filename
+
+        if skip_existing and is_valid(final, profile):
+            results.append(Result(slug, frame, profile, "skip", "already valid"))
+            print(f"  -> SKIP: already valid")
+            continue
+
+        prompt = generate_prompt(SPECS_DIR / f"{slug}.json", frame)
+        if not prompt:
+            results.append(Result(slug, frame, profile, "fail", "prompt generation failed"))
+            print(f"  -> FAIL: prompt generation failed")
+            continue
+
+        if dry_run:
+            out = STAGING_RAW / f"{slug}_{frame}_prompt.txt"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(prompt, encoding="utf-8")
+            results.append(Result(slug, frame, profile, "skip", f"dry run — {out}"))
+            continue
+
+        pending.append((slug, frame, profile, prompt))
+
+    # Batch generate in pairs
+    i = 0
+    while i < len(pending):
+        chunk = pending[i:i + BATCH_SIZE]
+        items = [(p[3], STAGING_RAW / f"{p[0]}_{p[1]}.png") for p in chunk]
+
+        names = ", ".join(f"{p[0]}_{p[1]}.png" for p in chunk)
+        print(f"\n  [batch] Codex generating {names}...")
+
+        gen_results = codex_generate_batch(items)
+
+        for j, (slug, frame, profile, prompt) in enumerate(chunk):
+            ok, msg = gen_results[j]
+            filename = f"{slug}_{frame}.png"
+            raw = STAGING_RAW / filename
+            norm = STAGING_NORM / filename
+
+            if not ok:
+                print(f"    {filename}: FAILED — {msg}")
+                # Retry individually
+                print(f"    Retrying {filename} individually...")
+                r = process_single(slug, frame, max_attempts - 1, False, False)
+                results.append(r)
+                continue
+
+            print(f"    {filename}: Image saved")
+            passed, result = normalize_and_validate(slug, frame, profile, raw, norm)
+            if passed:
+                results.append(result)
+            else:
+                # Retry individually
+                print(f"    Retrying {filename} individually...")
+                r = process_single(slug, frame, max_attempts - 1, False, False)
+                results.append(r)
+
+        i += BATCH_SIZE
+
+    return results
 
 
 def main() -> int:
@@ -169,6 +266,8 @@ def main() -> int:
     parser.add_argument("--no-skip", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--max-attempts", type=int, default=3)
+    parser.add_argument("--no-batch", action="store_true",
+                        help="Disable batch generation (1 sprite per Codex call)")
     args = parser.parse_args()
 
     if args.all:
@@ -179,12 +278,14 @@ def main() -> int:
         parser.error("provide entity slugs or --all")
         return 1
 
-    results: list[Result] = []
+    skip = not args.no_skip
+
+    # Build job list
+    all_jobs = []
     for slug in entities:
         spec = load_spec(slug)
         if not spec:
             print(f"\nSKIP {slug}: no spec")
-            results.append(Result(slug, "", "", "fail", "no spec"))
             continue
 
         if args.all_frames:
@@ -198,10 +299,16 @@ def main() -> int:
             print(f"\n{'='*50}")
             print(f"{slug} / {frame} ({spec['canvas_profile']})")
             print(f"{'='*50}")
-            r = process(slug, frame, args.max_attempts,
-                        not args.no_skip, args.dry_run)
+            all_jobs.append((slug, frame, spec))
+
+    if args.no_batch:
+        results = []
+        for slug, frame, spec in all_jobs:
+            r = process_single(slug, frame, args.max_attempts, skip, args.dry_run)
             results.append(r)
             print(f"  -> {r.status.upper()}: {r.message}")
+    else:
+        results = process_batch(all_jobs, skip, args.max_attempts, args.dry_run)
 
     passed = [r for r in results if r.status == "pass"]
     skipped = [r for r in results if r.status == "skip"]

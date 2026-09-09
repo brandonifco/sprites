@@ -260,25 +260,30 @@ def normalize_sprite(
     dither_cfg = profile.get("dithering", {})
     if not dither_cfg.get("allowed", True):
         dither_fixed = 0
-        for y in range(target_h):
-            for x in range(target_w):
-                if (x, y) not in opaque:
-                    continue
-                color = opaque[(x, y)]
-                neighbors = []
-                for nx, ny in (
-                    (x - 1, y),
-                    (x + 1, y),
-                    (x, y - 1),
-                    (x, y + 1),
-                ):
-                    if (nx, ny) in opaque:
-                        neighbors.append(opaque[(nx, ny)])
-                if len(neighbors) >= 2 and all(n != color for n in neighbors):
-                    most_common = Counter(neighbors).most_common(1)[0][0]
-                    opaque[(x, y)] = most_common
-                    px[x, y] = (*most_common, 255)
-                    dither_fixed += 1
+        for _pass in range(10):
+            fixed_this_pass = 0
+            for y in range(target_h):
+                for x in range(target_w):
+                    if (x, y) not in opaque:
+                        continue
+                    color = opaque[(x, y)]
+                    neighbors = []
+                    for nx, ny in (
+                        (x - 1, y),
+                        (x + 1, y),
+                        (x, y - 1),
+                        (x, y + 1),
+                    ):
+                        if (nx, ny) in opaque:
+                            neighbors.append(opaque[(nx, ny)])
+                    if len(neighbors) >= 2 and all(n != color for n in neighbors):
+                        most_common = Counter(neighbors).most_common(1)[0][0]
+                        opaque[(x, y)] = most_common
+                        px[x, y] = (*most_common, 255)
+                        fixed_this_pass += 1
+            dither_fixed += fixed_this_pass
+            if fixed_this_pass == 0:
+                break
         if dither_fixed:
             warnings.append(f"dither cleanup: smoothed {dither_fixed} pixels")
 
@@ -430,6 +435,81 @@ def normalize_sprite(
             f"({unique_before} -> {len(set(opaque.values()))})"
         )
 
+    # --- Stage 5d: Post-diversity dither cleanup (no-dither profiles) ---
+    # Instead of smoothing isolated pixels (which kills diversity colors),
+    # grow them: convert an adjacent pixel to match, forming a 2px cluster.
+    if not dither_cfg.get("allowed", True):
+        post_dither_fixed = 0
+        color_counts = Counter(opaque.values())
+        for _pass in range(10):
+            fixed_this_pass = 0
+            for y in range(target_h):
+                for x in range(target_w):
+                    if (x, y) not in opaque:
+                        continue
+                    color = opaque[(x, y)]
+                    neighbor_positions = []
+                    neighbor_colors = []
+                    for nx, ny in (
+                        (x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1),
+                    ):
+                        if (nx, ny) in opaque:
+                            neighbor_positions.append((nx, ny))
+                            neighbor_colors.append(opaque[(nx, ny)])
+                    if len(neighbor_colors) < 2 or not all(n != color for n in neighbor_colors):
+                        continue
+                    # This pixel is isolated — try to grow it
+                    # Pick the neighbor whose color is most abundant (safest to convert)
+                    best_nb = None
+                    best_count = 0
+                    for npos, ncol in zip(neighbor_positions, neighbor_colors):
+                        if color_counts[ncol] > best_count:
+                            best_count = color_counts[ncol]
+                            best_nb = npos
+                            best_nb_col = ncol
+                    if best_nb and best_count >= 2:
+                        color_counts[best_nb_col] -= 1
+                        color_counts[color] += 1
+                        opaque[best_nb] = color
+                        px[best_nb[0], best_nb[1]] = (*color, 255)
+                        fixed_this_pass += 1
+            post_dither_fixed += fixed_this_pass
+            if fixed_this_pass == 0:
+                break
+        if post_dither_fixed:
+            warnings.append(f"post-diversity dither grow: clustered {post_dither_fixed} pixels")
+
+        # Final smoothing pass for any remaining dither (protect colors with <= 2 pixels)
+        final_smooth = 0
+        color_counts = Counter(opaque.values())
+        for _pass in range(10):
+            fixed_this_pass = 0
+            for y in range(target_h):
+                for x in range(target_w):
+                    if (x, y) not in opaque:
+                        continue
+                    color = opaque[(x, y)]
+                    if color_counts[color] <= 2:
+                        continue
+                    neighbors = []
+                    for nx, ny in (
+                        (x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1),
+                    ):
+                        if (nx, ny) in opaque:
+                            neighbors.append(opaque[(nx, ny)])
+                    if len(neighbors) >= 2 and all(n != color for n in neighbors):
+                        most_common = Counter(neighbors).most_common(1)[0][0]
+                        color_counts[color] -= 1
+                        color_counts[most_common] += 1
+                        opaque[(x, y)] = most_common
+                        px[x, y] = (*most_common, 255)
+                        fixed_this_pass += 1
+            final_smooth += fixed_this_pass
+            if fixed_this_pass == 0:
+                break
+        if final_smooth:
+            warnings.append(f"post-diversity dither smooth: fixed {final_smooth} pixels")
+
     # --- Stage 6: Color count enforcement ---
     color_rule = profile["unique_opaque_colors"]
     for _ in range(max_color_reduce_passes):
@@ -545,6 +625,55 @@ def normalize_sprite(
                     f"white cluster split: replaced {w_split} excess "
                     f"white pixels (cluster max {cluster_max})"
                 )
+
+    # --- Stage 9: Final dither cleanup (no-dither profiles) ---
+    if not dither_cfg.get("allowed", True):
+        final_dither = 0
+        for _pass in range(10):
+            fixed_this_pass = 0
+            color_counts = Counter(opaque.values())
+            for y in range(target_h):
+                for x in range(target_w):
+                    if (x, y) not in opaque:
+                        continue
+                    color = opaque[(x, y)]
+                    neighbors = []
+                    neighbor_positions = []
+                    for nx, ny in (
+                        (x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1),
+                    ):
+                        if (nx, ny) in opaque:
+                            neighbors.append(opaque[(nx, ny)])
+                            neighbor_positions.append((nx, ny))
+                    if len(neighbors) < 2 or not all(n != color for n in neighbors):
+                        continue
+                    # Try grow first (convert most-abundant neighbor to our color)
+                    best_nb = None
+                    best_count = 0
+                    for npos, ncol in zip(neighbor_positions, neighbors):
+                        if color_counts[ncol] > best_count:
+                            best_count = color_counts[ncol]
+                            best_nb = npos
+                            best_nb_col = ncol
+                    if best_nb and best_count >= 2:
+                        color_counts[best_nb_col] -= 1
+                        color_counts[color] += 1
+                        opaque[best_nb] = color
+                        px[best_nb[0], best_nb[1]] = (*color, 255)
+                        fixed_this_pass += 1
+                    elif color_counts[color] > 2:
+                        # Fallback: smooth this pixel to its most common neighbor
+                        most_common = Counter(neighbors).most_common(1)[0][0]
+                        color_counts[color] -= 1
+                        color_counts[most_common] += 1
+                        opaque[(x, y)] = most_common
+                        px[x, y] = (*most_common, 255)
+                        fixed_this_pass += 1
+            final_dither += fixed_this_pass
+            if fixed_this_pass == 0:
+                break
+        if final_dither:
+            warnings.append(f"final dither cleanup: fixed {final_dither} pixels")
 
     # --- Final bbox check (with trim attempt) ---
     if opaque:
